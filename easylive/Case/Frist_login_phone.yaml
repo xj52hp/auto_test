@@ -1,0 +1,19 @@
+---
+-
+  element_info: com.ccvideo:id/login_phone_iv
+  find_type: by_id
+  operate_type: click
+-
+  element_info: com.ccvideo:id/register_phone_et
+  find_type: by_id
+  operate_type: send_keys
+  text: 18911373631
+-
+  element_info: com.ccvideo:id/password_et
+  find_type: by_id
+  operate_type: send_keys
+  text: 222222
+-
+  element_info: com.ccvideo:id/login_btn
+  find_type: by_id
+  operate_type: click

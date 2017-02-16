@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../appium/.idea/appium.iml" filepath="$PROJECT_DIR$/../appium/.idea/appium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../appium_python/.idea/appium_python.iml" filepath="$PROJECT_DIR$/../appium_python/.idea/appium_python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../appiumn_auto/.idea/appium_study.iml" filepath="$PROJECT_DIR$/../appiumn_auto/.idea/appium_study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../auto_http_api/.idea/auto_http34_test.iml" filepath="$PROJECT_DIR$/../auto_http_api/.idea/auto_http34_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../easylive/.idea/easylive.iml" filepath="$PROJECT_DIR$/../easylive/.idea/easylive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/untitled.iml" filepath="$PROJECT_DIR$/.idea/untitled.iml" />
+    </modules>
+  </component>
+</project>

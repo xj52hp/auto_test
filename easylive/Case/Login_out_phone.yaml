@@ -1,0 +1,26 @@
+---
+-
+  element_info: com.ccvideo:id/tab_bar_mine_btn
+  find_type: by_id
+  operate_type: click
+-
+  element_info: com.ccvideo:id/setting_tv
+  find_type: by_id
+  operate_type: click
+-
+  element_info: android.widget.LinearLayout
+  find_type: class_name
+  operate_type: swipeUp
+  time: 3
+-
+  element_info: com.ccvideo:id/logout_btn
+  find_type: by_id
+  operate_type: click
+-
+  element_info: android:id/button1
+  find_type: by_id
+  operate_type: click
+-
+  element_info: com.ccvideo:id/login_phone_iv
+  find_type: by_id
+  operate_type: click
