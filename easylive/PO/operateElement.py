@@ -55,7 +55,7 @@ def find_str(mOperate, cts):
             print('find_string:', find_string, 'mOperate[text]:', mOperate['text'])
             return True
         else:
-            return "stop"
+            return False
     except:
         print('find_str---->查找错误')
         return None
@@ -68,7 +68,7 @@ def find_strs(mOperate, cts):
             print('find_strings:', find_strings, 'mOperate[text]:', mOperate['text'])
             return True
         else:
-            return "stop"
+            return False
     except:
         print('find_strs---->查找错误')
         return None

@@ -17,16 +17,17 @@ class AppCase(object):
 
         gh = operateYaml.getYam(f)
         for i in gh:
-            print('i ---->', i)
             _operate = bo.OperateElement.operate_element(self, mOperate=i)
-            print('i ---->', i, '_operate----->', _operate)
-            if _operate is False and _operate['case_name'] == "frist_login":
-                #以下注释掉代码解决Android帐号互踢后闪白屏问题
-                # i = gh[0]
-                # bo.OperateElement.operate_element(self, mOperate=i)
-                # print('i-->', i, 'gh[0]-->', gh[0])
-                print('call testLogin_Out---->')
-                lo.testLogin_Out.test_login(self)
+            print('i---->', i, '_operate----->', _operate)
+            if _operate is False:
+                print(i['case_name'])
+                if i['case_name'] == "frist_login":
+                    #以下注释掉代码解决Android帐号互踢后闪白屏问题
+                    # i = gh[0]
+                    # bo.OperateElement.operate_element(self, mOperate=i)
+                    # print('i-->', i, 'gh[0]-->', gh[0])
+                    print('call testLogin_Out---->')
+                    lo.testLogin_Out.test_login(self)
         print('over---->')
 
 
