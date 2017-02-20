@@ -1,0 +1,19 @@
+---
+-
+  element_info: com.ccvideo:id/tab_bar_search_btn
+  find_type: by_id
+  operate_type: click
+-
+  element_info: com.ccvideo:id/tab_bar_keyword_et
+  find_type: by_id
+  operate_type: send_keys
+  text: 12
+-
+  element_info: com.ccvideo:id/tab_bar_cancel_tv
+  find_type: by_id
+  operate_type: click
+-
+  element_info: com.ccvideo:id/nickname_tv
+  find_type: by_id
+  operate_type: find_strs
+  text: 3

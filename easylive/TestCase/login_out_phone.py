@@ -9,9 +9,7 @@ PATH = lambda p: os.path.abspath(
 )
 
 class testLogin_Out(unittest.TestCase):
-    """
-    登录
-    """
+
     desired_caps = {
         'platformName': 'Android',
         'platformVersion': '6.0.1',

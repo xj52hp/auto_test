@@ -9,7 +9,7 @@ PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
 
-class testFrist_Login(unittest.TestCase):
+class testsearch(unittest.TestCase):
 
     desired_caps = {
         'platformName': 'Android',
@@ -22,9 +22,9 @@ class testFrist_Login(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', self.desired_caps)
 
-    def test_login(self):
+    def test_search(self):
 
-        home_login_yaml = PATH("E:\PycharmProjects\easylive\Case\Frist_login_phone.yaml")
+        home_login_yaml = PATH("E:\PycharmProjects\easylive\Case\Search.yaml")
         ac.AppCase.execCase(self, f=home_login_yaml)
 
     def tearDown(self):

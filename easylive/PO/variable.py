@@ -36,6 +36,7 @@ class GetVariable(object):
 
     SEND_KEYS = "send_keys"
     FIND_STR = "find_str"
+    FIND_STRS = "find_strs"
     WAIT_TIME = 20
 
     #selenium

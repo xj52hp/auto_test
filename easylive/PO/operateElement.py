@@ -14,10 +14,8 @@ class OperateElement():
         except selenium.common.exceptions.TimeoutException:
             return False
         except selenium.common.exceptions.NoSuchElementException:
-            print("找不到数据")
-            return False
+             return False
         except:
-            print("找不到数据")
             return False
     def operate_element(self, mOperate):
         if OperateElement.findElement(self, mOperate):
@@ -27,8 +25,9 @@ class OperateElement():
                 common.SWIPELEFT: lambda: opreate_swipe_left(mOperate, self.driver),
                 common.SWIPEDOWN: lambda: opreate_swipe_down(mOperate, self.driver),
                 common.SWIPEUP: lambda: opreate_swipe_up(mOperate, self.driver),
-                common.SWIPERIGHT: lambda: opreate_swipe_down(mOperate, self.driver)
-                # common.SEND_CODE: lambda: send_code()
+                common.SWIPERIGHT: lambda: opreate_swipe_down(mOperate, self.driver),
+                common.FIND_STR: lambda: find_str(mOperate, self.driver),
+                common.FIND_STRS: lambda: find_strs(mOperate, self.driver)
             }
             return elements[mOperate["operate_type"]]()
         return False
@@ -48,6 +47,31 @@ def send_keys(mOperate, cts):
     except:
         print('输入错误')
         return False
+
+def find_str(mOperate, cts):
+    try:
+        find_string = elements_by(mOperate, cts).text
+        if str(find_string) == str(mOperate['text']):
+            print('find_string:', find_string, 'mOperate[text]:', mOperate['text'])
+            return True
+        else:
+            return "stop"
+    except:
+        print('find_str---->查找错误')
+        return None
+
+def find_strs(mOperate, cts):
+    try:
+        find_strings = elements_by(mOperate, cts).text
+        print('find_strings---->', find_strings)
+        if str(mOperate['text']) in str(find_strings):
+            print('find_strings:', find_strings, 'mOperate[text]:', mOperate['text'])
+            return True
+        else:
+            return "stop"
+    except:
+        print('find_strs---->查找错误')
+        return None
 
 # 手势向右侧移动
 def opreate_swipe_left(mOperate, cts):
