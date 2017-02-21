@@ -37,12 +37,15 @@ class GetVariable(object):
     SEND_KEYS = "send_keys"
     FIND_STR = "find_str"
     FIND_STRS = "find_strs"
+    SAVE_STRS = "save_strs"
+    DIFF_NUM = "diff_num"
     WAIT_TIME = 20
 
     #selenium
     SEND_CODE = "send_code" # 输入验证码
 
     #本地存储记录所有的case情况的路径
+    SAVE_DIR = "d:/"
     REPORT_INFO_PATH = "d:/info.txt"
     REPORT_INIT = "d:/init.txt"
     REPORT_COLLECT_PATH = "d:/collect.txt"

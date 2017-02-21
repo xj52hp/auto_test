@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from PO import operateYaml
 from PO import operateElement as bo
 from TestCase import login_out_phone as lo
+import time
 
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
@@ -19,15 +20,16 @@ class AppCase(object):
         for i in gh:
             _operate = bo.OperateElement.operate_element(self, mOperate=i)
             print('i---->', i, '_operate----->', _operate)
+            time.sleep(2)
             if _operate is False:
-                print(i['case_name'])
-                if i['case_name'] == "frist_login":
-                    #以下注释掉代码解决Android帐号互踢后闪白屏问题
-                    # i = gh[0]
-                    # bo.OperateElement.operate_element(self, mOperate=i)
-                    # print('i-->', i, 'gh[0]-->', gh[0])
+                print('join _operate is False!!!')
+                if i['case_name'] is True and i['case_name'] == "frist_login":
                     print('call testLogin_Out---->')
                     lo.testLogin_Out.test_login(self)
+                else:
+
+                    print('执行用例出现错误!!!')
+                    break
         print('over---->')
 
 

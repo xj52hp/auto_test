@@ -1,15 +1,18 @@
 ---
 -
+  case_name: frist_install
   element_info: com.huawei.systemmanager:id/btn_allow
   find_type: by_id
   operate_type: click
   text: 允许
 -
+  case_name: frist_install
   element_info: com.huawei.systemmanager:id/btn_allow
   find_type: by_id
   operate_type: click
   text: 允许
  -
+  case_name: frist_install
   element_info: com.ccvideo:id/dialog_continue_tv
   find_type: by_id
   operate_type: click

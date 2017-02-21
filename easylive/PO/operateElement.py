@@ -1,8 +1,13 @@
 
 from PO.variable import GetVariable as common
+from PO import operateYaml as gt
 from selenium.webdriver.support.ui import WebDriverWait
 import selenium.common.exceptions
-import time
+import time,re,os,yaml
+PATH = lambda p: os.path.abspath(
+    os.path.join(os.path.dirname(__file__), p)
+)
+temp_file = "E:\PycharmProjects\easylive\Case\Casetemp.txt"
 
 class OperateElement():
     def __init__(self, driver=""):
@@ -25,9 +30,11 @@ class OperateElement():
                 common.SWIPELEFT: lambda: opreate_swipe_left(mOperate, self.driver),
                 common.SWIPEDOWN: lambda: opreate_swipe_down(mOperate, self.driver),
                 common.SWIPEUP: lambda: opreate_swipe_up(mOperate, self.driver),
-                common.SWIPERIGHT: lambda: opreate_swipe_down(mOperate, self.driver),
+                common.SWIPERIGHT: lambda: opreate_swipe_right(mOperate, self.driver),
                 common.FIND_STR: lambda: find_str(mOperate, self.driver),
-                common.FIND_STRS: lambda: find_strs(mOperate, self.driver)
+                common.FIND_STRS: lambda: find_strs(mOperate, self.driver),
+                common.SAVE_STRS: lambda: save_strs(mOperate, self.driver),
+                common.DIFF_NUM: lambda: diff_num(mOperate, self.driver)
             }
             return elements[mOperate["operate_type"]]()
         return False
@@ -63,7 +70,6 @@ def find_str(mOperate, cts):
 def find_strs(mOperate, cts):
     try:
         find_strings = elements_by(mOperate, cts).text
-        print('find_strings---->', find_strings)
         if str(mOperate['text']) in str(find_strings):
             print('find_strings:', find_strings, 'mOperate[text]:', mOperate['text'])
             return True
@@ -72,25 +78,39 @@ def find_strs(mOperate, cts):
     except:
         print('find_strs---->查找错误')
         return None
+def save_strs(mOperate, cts):
+    bo = gt.writeTxt(temp_file, elements_by(mOperate, cts).text)
+    return bo
 
-# 手势向右侧移动
+def diff_num(mOperate, cts):
+        x = gt.getTxt(temp_file)
+        x = re.sub("\D", "", x)
+        y = re.sub("\D", "", elements_by(mOperate, cts).text)
+        if int(x) == int(y) + int(mOperate['cost_num']):
+            return True
+        else:
+            print('消耗异常:---->', int(x), '!=', int(y), '+', int(mOperate['cost_num']))
+            return False
+
+
+# 手势向左侧滑动
 def opreate_swipe_left(mOperate, cts):
     time.sleep(1)
-    print('手势向右侧移动')
+    print('手势向左侧滑动')
     width = cts.get_window_size()["width"]
     height = cts.get_window_size()["height"]
     for i in range(mOperate["time"]):
-        cts.swipe(int(width/4*3), int(height/2), int(width/4*1), int(height/2), 500)
+        cts.swipe(int(width*0.75), int(height*3/4), int(width*0.25), int(height*3/4), 500)
         time.sleep(1)
 
-# 手势向左侧移动
+# 手势向右侧滑动
 def opreate_swipe_right(mOperate, cts):
     time.sleep(1)
-    print('手势向左侧移动')
+    print('手势向右侧滑动')
     width = cts.get_window_size()["width"]
     height = cts.get_window_size()["height"]
     for i in range(mOperate["time"]):
-        cts.swipe(int(width /4*1), int(height/2), int(width/4*3), int(height/2), 500)
+        cts.swipe(int(width*0.25), int(height*3/4), int(width*0.75), int(height*3/4), 500)
         time.sleep(1)
 
 
