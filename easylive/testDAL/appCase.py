@@ -15,22 +15,33 @@ PATH = lambda p: os.path.abspath(
 class AppCase(object):
 
     def execCase(self, f):
+        time.sleep(20)
 
         gh = operateYaml.getYam(f)
         for i in gh:
             _operate = bo.OperateElement.operate_element(self, mOperate=i)
-            print('i---->', i, '_operate----->', _operate)
-            time.sleep(2)
+            print('i["case_id"]---->', i['case_id'], '_operate----->', _operate)
+            time.sleep(1)
             if _operate is False:
                 print('join _operate is False!!!')
-                if i['case_name'] is True and i['case_name'] == "frist_login":
-                    print('call testLogin_Out---->')
-                    lo.testLogin_Out.test_login(self)
-                else:
+                fh = fault_Handle(i)
+                print('i["element_info"]---->', i['element_info'], 'i["element_info"]---->', i['element_info'], 'fh---->', fh)
+                return fh
 
-                    print('执行用例出现错误!!!')
-                    break
+
         print('over---->')
+def fault_Handle(i):
+    if i['case_name'] is True:
+        if i['case_name'] == "frist_login":
+            print('call testLogin_Out---->')
+            lo.testLogin_Out.test_login()
+            return True
+        elif i['case_name'] == "room":
+            print('go on execcase---->')
+            return True
+    else:
+        print('执行用例出现错误!!!')
+        return False
 
 
 

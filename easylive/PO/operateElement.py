@@ -2,8 +2,9 @@
 from PO.variable import GetVariable as common
 from PO import operateYaml as gt
 from selenium.webdriver.support.ui import WebDriverWait
+from appium import webdriver
 import selenium.common.exceptions
-import time,re,os,yaml
+import time,re,os
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
@@ -15,6 +16,7 @@ class OperateElement():
     def findElement(self, mOperate):
         try:
             WebDriverWait(self.driver, common.WAIT_TIME).until(lambda x: elements_by(mOperate, self.driver))
+
             return True
         except selenium.common.exceptions.TimeoutException:
             return False
@@ -34,7 +36,8 @@ class OperateElement():
                 common.FIND_STR: lambda: find_str(mOperate, self.driver),
                 common.FIND_STRS: lambda: find_strs(mOperate, self.driver),
                 common.SAVE_STRS: lambda: save_strs(mOperate, self.driver),
-                common.DIFF_NUM: lambda: diff_num(mOperate, self.driver)
+                common.DIFF_NUM: lambda: diff_num(mOperate, self.driver),
+                common.SYSTEM_BACK: lambda: system_back(mOperate),
             }
             return elements[mOperate["operate_type"]]()
         return False
@@ -83,10 +86,16 @@ def save_strs(mOperate, cts):
     return bo
 
 def diff_num(mOperate, cts):
+        time.sleep(3)
         x = gt.getTxt(temp_file)
         x = re.sub("\D", "", x)
         y = re.sub("\D", "", elements_by(mOperate, cts).text)
+        if mOperate['operate_name'] == "roll":
+            y = re.sub("\D", "", x)
+            x = re.sub("\D", "", elements_by(mOperate, cts).text)
+
         if int(x) == int(y) + int(mOperate['cost_num']):
+            print('变化:---->', int(mOperate['cost_num']))
             return True
         else:
             print('消耗异常:---->', int(x), '!=', int(y), '+', int(mOperate['cost_num']))
@@ -133,6 +142,16 @@ def opreate_swipe_up(mOperate, cts):
     for i in range(mOperate["time"]):
         cts.swipe(int(width/2), int(height*0.75), int(width/2), int(height*0.25), 500)
         time.sleep(1)
+
+
+def system_back(mOperate):
+    print('mOperate["text"]---->', mOperate['text'])
+    webdriver.Remote.press_keycode(4)
+
+
+
+
+
 
 # 封装常用的标签
 def elements_by(mOperate, cts):

@@ -40,6 +40,7 @@ class GetVariable(object):
     SAVE_STRS = "save_strs"
     DIFF_NUM = "diff_num"
     WAIT_TIME = 20
+    SYSTEM_BACK = "system_back"
 
     #selenium
     SEND_CODE = "send_code" # 输入验证码
