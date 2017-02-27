@@ -17,6 +17,7 @@ class testroom(unittest.TestCase):
         'deviceName': 'm1 note',
         'appPackage': 'com.ccvideo',
         'noReset': 'true',
+        # 'automationName': 'Selendroid',
         'app': 'C:\\Users\\Administrator\\Desktop\\123.apk'
     }
     def setUp(self):

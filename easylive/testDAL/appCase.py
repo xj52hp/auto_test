@@ -31,7 +31,7 @@ class AppCase(object):
 
         print('over---->')
 def fault_Handle(i):
-    if i['case_name'] is True:
+    if i['case_name'] == True:
         if i['case_name'] == "frist_login":
             print('call testLogin_Out---->')
             lo.testLogin_Out.test_login()

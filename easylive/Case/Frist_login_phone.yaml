@@ -14,7 +14,7 @@
   element_info: com.ccvideo:id/password_et
   find_type: by_id
   operate_type: send_keys
-  text: 222222
+  text: 000000
   case_name: frist_login
 -
   element_info: com.ccvideo:id/login_btn

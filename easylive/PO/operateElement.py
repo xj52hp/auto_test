@@ -2,6 +2,8 @@
 from PO.variable import GetVariable as common
 from PO import operateYaml as gt
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 from appium import webdriver
 import selenium.common.exceptions
 import time,re,os
@@ -16,7 +18,6 @@ class OperateElement():
     def findElement(self, mOperate):
         try:
             WebDriverWait(self.driver, common.WAIT_TIME).until(lambda x: elements_by(mOperate, self.driver))
-
             return True
         except selenium.common.exceptions.TimeoutException:
             return False
@@ -24,6 +25,9 @@ class OperateElement():
              return False
         except:
             return False
+    # def findtoast(self,mOperate):
+    #     try:
+    #         WebDriverWait(self.driver, common.WAIT_TIME).until(EC.)
     def operate_element(self, mOperate):
         if OperateElement.findElement(self, mOperate):
             elements = {
@@ -37,9 +41,11 @@ class OperateElement():
                 common.FIND_STRS: lambda: find_strs(mOperate, self.driver),
                 common.SAVE_STRS: lambda: save_strs(mOperate, self.driver),
                 common.DIFF_NUM: lambda: diff_num(mOperate, self.driver),
-                common.SYSTEM_BACK: lambda: system_back(mOperate),
+                common.SYSTEM_BUTTON: lambda: system_button(mOperate, self.driver),
+                common.FIND_TOAST: lambda: find_toast(mOperate, self.driver)
             }
             return elements[mOperate["operate_type"]]()
+
         return False
 # 点击事件
 def operate_click(mOperate, cts):
@@ -144,13 +150,22 @@ def opreate_swipe_up(mOperate, cts):
         time.sleep(1)
 
 
-def system_back(mOperate):
-    print('mOperate["text"]---->', mOperate['text'])
-    webdriver.Remote.press_keycode(4)
+def system_button(mOperate, cts):
+    print('按系统键位：---->', mOperate['text'])
+    webdriver.Remote.keyevent(cts, int(mOperate['text']), metastate=None)
 
+def find_toast(mOperate, cts):
 
+    print('mOperate["text"]：---->', mOperate['text'])
+    operate_click(mOperate, cts)
 
+    try:
+        # aa = str(mOperate['text']
+        WebDriverWait(cts, 20, 1).until(EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, "没有未读消息")))
 
+        return True
+    except:
+        return False
 
 
 # 封装常用的标签

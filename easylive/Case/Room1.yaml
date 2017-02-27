@@ -15,22 +15,41 @@
 
 #检查主播商城
 -
-  case_id: room_041
+  case_id: room_044
   case_name: room
-  element_info: com.ccvideo:id/good_buy_iv
+  element_info: com.ccvideo:id/player_bottom_room_chat_btn
   find_type: by_id
   operate_type: click
 -
-  case_id: room_042
+  case_id: room_045
   case_name: room
-  element_info: com.ccvideo:id/good_buy_tv
+  element_info: com.ccvideo:id/msg_title_tv
   find_type: by_id
   operate_type: find_str
-  text: 购买
+  text: 易直播小秘书
 -
-  case_id: room_043
+  case_id: room_046
   case_name: room
-  element_info: com.ccvideo:id/good_buy_tv
+  element_info: com.ccvideo:id/live_chat_group
   find_type: by_id
-  operate_type: system_back
-  text: 4
+  operate_type: click
+-
+  case_id: room_047
+  case_name: room
+  element_info: com.ccvideo:id/live_chat_group
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_048
+  case_name: room
+  element_info: com.ccvideo:id/empty_title_tv
+  find_type: by_id
+  operate_type: find_strs
+  text: 没人说话？快找人聊聊去
+-
+  case_id: room_049
+  case_name: room
+  element_info: com.ccvideo:id/live_chat_ignore_unread
+  find_type: by_id
+  operate_type: find_toast
+  text: 没有未读消息
