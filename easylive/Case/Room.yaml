@@ -1,4 +1,5 @@
 ---
+#--------------------------------------------------
 #检查房间内各状态
 -
   case_id: room_001
@@ -19,140 +20,120 @@
   find_type: by_id
   operate_type: find_strs
   text: 主播未开播
+#------------------------------------------------------------
+#检查房间内私信群组
 -
   case_id: room_004
   case_name: room
-  element_info: com.ccvideo:id/rice_roll_count_tv
-  find_type: by_id
-  operate_type: find_strs
-  text: 饭团
-#输入值，发送聊天内容
-
-
-##########输入重复字符串，方便测试后续#######################
--
-  case_id: room_005
-  case_name: room
-  element_info: com.ccvideo:id/living_room_comment_btn
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_006
-  case_name: room
-  element_info: com.ccvideo:id/send_edt
-  find_type: by_id
-  operate_type: send_keys
-  text: 0
--
-  case_id: room_007
-  case_name: room
-  element_info: com.ccvideo:id/btn_send
+  element_info: com.ccvideo:id/player_bottom_room_chat_btn
   find_type: by_id
   operate_type: click
 -
   case_id: room_005
   case_name: room
-  element_info: com.ccvideo:id/living_room_comment_btn
+  element_info: com.ccvideo:id/msg_title_tv
   find_type: by_id
-  operate_type: click
+  operate_type: find_str
+  text: 易直播小秘书
 -
   case_id: room_006
   case_name: room
-  element_info: com.ccvideo:id/send_edt
+  element_info: com.ccvideo:id/live_chat_group
   find_type: by_id
-  operate_type: send_keys
-  text: 0
+  operate_type: click
 -
   case_id: room_007
   case_name: room
-  element_info: com.ccvideo:id/btn_send
-  find_type: by_id
-  operate_type: click
-
--
-  case_id: room_005
-  case_name: room
-  element_info: com.ccvideo:id/living_room_comment_btn
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_006
-  case_name: room
-  element_info: com.ccvideo:id/send_edt
-  find_type: by_id
-  operate_type: send_keys
-  text: 0
--
-  case_id: room_007
-  case_name: room
-  element_info: com.ccvideo:id/btn_send
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_005
-  case_name: room
-  element_info: com.ccvideo:id/living_room_comment_btn
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_006
-  case_name: room
-  element_info: com.ccvideo:id/send_edt
-  find_type: by_id
-  operate_type: send_keys
-  text: 0
--
-  case_id: room_007
-  case_name: room
-  element_info: com.ccvideo:id/btn_send
-  find_type: by_id
-  operate_type: click
-
-####################################################
-
-#测试文本发送内容
--
-  case_id: room_005
-  case_name: room
-  element_info: com.ccvideo:id/living_room_comment_btn
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_006
-  case_name: room
-  element_info: com.ccvideo:id/send_edt
-  find_type: by_id
-  operate_type: send_keys
-  text: 11223344
--
-  case_id: room_007
-  case_name: room
-  element_info: com.ccvideo:id/btn_send
+  element_info: com.ccvideo:id/live_chat_group
   find_type: by_id
   operate_type: click
 -
   case_id: room_008
   case_name: room
-  element_info: //android.support.v7.widget.RecyclerView//android.widget.RelativeLayout[@index='6']//android.widget.TextView
-  find_type: by_xpath
+  element_info: com.ccvideo:id/empty_title_tv
+  find_type: by_id
   operate_type: find_strs
-  text: 11223344
-#发送礼物，左滑一次，寻找1易币的礼物进行发送
+  text: 没人说话？快找人聊聊去
 -
   case_id: room_009
+  case_name: room
+  element_info: com.ccvideo:id/live_chat_ignore_unread
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_010
+  case_name: room
+  element_info: com.ccvideo:id/live_chat_ignore_unread
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_011
+  case_name: room
+  element_info: com.ccvideo:id/live_chat_ignore_unread
+  find_type: by_id
+  operate_type: system_button
+  text: 4
+#-------------------------------------------------------------
+#分享
+-
+  case_id: room_012
+  case_name: room
+  element_info: com.ccvideo:id/living_room_share_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_013
+  case_name: room
+  element_info: com.ccvideo:id/bottom_sheet_title
+  find_type: by_id
+  operate_type: find_strs
+  text: 分享
+ #复制链接
+-
+  case_id: room_014
+  case_name: room
+  element_info: //android.widget.GridView//android.widget.LinearLayout[@index='5']//android.widget.TextView
+  find_type: by_xpath
+  operate_type: click
+#------------------------------------------------------------
+#检查主播商城
+-
+  case_id: room_015
+  case_name: room
+  element_info: com.ccvideo:id/good_buy_iv
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_016
+  case_name: room
+  element_info: com.ccvideo:id/good_buy_tv
+  find_type: by_id
+  operate_type: find_str
+  text: 购买
+-
+  case_id: room_017
+  case_name: room
+  element_info: com.ccvideo:id/good_buy_tv
+  find_type: by_id
+  operate_type: system_button
+  text: 4
+#------------------------------------------------------------
+#礼物测试，左滑一次，寻找1易币的礼物进行发送
+-
+  case_id: room_018
   case_name: room
   element_info: com.ccvideo:id/live_room_gift_iv
   find_type: by_id
   operate_type: click
 -
-  case_id: room_010
+  case_id: room_019
   case_name: room
   element_info: com.ccvideo:id/gift_content_gv
   find_type: by_id
   operate_type: swipeLeft
   time: 2
 -
-  case_id: room_011
+  case_id: room_020
   case_name: room
   element_info: //android.widget.TextView[@text='1']
   find_type: by_xpath
@@ -295,6 +276,34 @@
   element_info: com.ccvideo:id/living_room_tip_tv
   find_type: by_id
   operate_type: click
+#--------------------------------------------------------
+#输入值，发送聊天内容
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 11223344
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_008
+  case_name: room
+  element_info: //android.support.v7.widget.RecyclerView//android.widget.RelativeLayout[@index='6']//android.widget.TextView
+  find_type: by_xpath
+  operate_type: find_strs
+  text: 11223344
 #呼出聊天对话框
 -
   case_id: room_032
@@ -360,104 +369,6 @@
   element_info: com.ccvideo:id/living_room_tip_tv
   find_type: by_id
   operate_type: click
-#检查主播商城
--
-  case_id: room_041
-  case_name: room
-  element_info: com.ccvideo:id/good_buy_iv
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_042
-  case_name: room
-  element_info: com.ccvideo:id/good_buy_tv
-  find_type: by_id
-  operate_type: find_str
-  text: 购买
--
-  case_id: room_043
-  case_name: room
-  element_info: com.ccvideo:id/good_buy_tv
-  find_type: by_id
-  operate_type: system_button
-  text: 4
-#检查房间内私信群组
--
-  case_id: room_044
-  case_name: room
-  element_info: com.ccvideo:id/player_bottom_room_chat_btn
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_045
-  case_name: room
-  element_info: com.ccvideo:id/msg_title_tv
-  find_type: by_id
-  operate_type: find_str
-  text: 易直播小秘书
--
-  case_id: room_046
-  case_name: room
-  element_info: com.ccvideo:id/live_chat_group
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_047
-  case_name: room
-  element_info: com.ccvideo:id/live_chat_group
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_048
-  case_name: room
-  element_info: com.ccvideo:id/empty_title_tv
-  find_type: by_id
-  operate_type: find_strs
-  text: 没人说话？快找人聊聊去
--
-  case_id: room_049
-  case_name: room
-  element_info: com.ccvideo:id/live_chat_ignore_unread
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_050
-  case_name: room
-  element_info: com.ccvideo:id/live_chat_ignore_unread
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_051
-  case_name: room
-  element_info: com.ccvideo:id/live_chat_ignore_unread
-  find_type: by_id
-  operate_type: system_button
-  text: 4
-
-
-
-#分享
--
-  case_id: room_052
-  case_name: room
-  element_info: com.ccvideo:id/living_room_share_btn
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_053
-  case_name: room
-  element_info: com.ccvideo:id/bottom_sheet_title
-  find_type: by_id
-  operate_type: find_strs
-  text: 分享
- #复制链接
--
-  case_id: room_054
-  case_name: room
-  element_info: //android.widget.GridView//android.widget.LinearLayout[@index='5']//android.widget.TextView
-  find_type: by_xpath
-  operate_type: click
-
  #评论区发送表情与快速文本
  #表情
 -
@@ -484,7 +395,6 @@
   element_info: com.ccvideo:id/btn_send
   find_type: by_id
   operate_type: click
-
 -
   case_id: room_059
   case_name: room

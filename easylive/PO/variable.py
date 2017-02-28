@@ -42,6 +42,7 @@ class GetVariable(object):
     DIFF_STRS = "diff_strs"
     WAIT_TIME = 20
     SYSTEM_BUTTON = "system_button"
+    COMMENT_REGION = "comment_region"
     FIND_TOAST = "find_toast"
     TEXT_IN_ELEMENT = "text_in_element"
 

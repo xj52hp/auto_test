@@ -40,6 +40,7 @@ class OperateElement():
                 common.DIFF_NUM: lambda: diff_num(mOperate, self.driver),
                 common.DIFF_STRS: lambda: diff_strs(mOperate, self.driver),
                 common.SYSTEM_BUTTON: lambda: system_button(mOperate, self.driver),
+                common.COMMENT_REGION: lambda: comment_region(mOperate, self.driver),
                 common.FIND_TOAST: lambda: find_toast(mOperate, self.driver)
             }
             return elements[mOperate["operate_type"]]()
@@ -168,15 +169,31 @@ def system_button(mOperate, cts):
         return False
 
 def find_toast(mOperate, cts):
-
     operate_click(mOperate, cts)
-
     try:
         print('mOperate["text"]：---->', mOperate['text'])
         WebDriverWait(cts, 20, 1).until(EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, "没有未读消息")))
         return True
     except:
         return False
+
+def comment_region(mOperate, cts):
+
+    for i in range(7):
+        findstrs = find_strs(mOperate, cts)
+        if findstrs != True:
+            strs = mOperate['element_info']
+            x = re.sub("\D", "", strs.split('=')[-1].split(']')[0])
+            y = str(int(x) + 1)
+            x = 'index=\'' + x + '\''
+            y = 'index=\'' + y + '\''
+            print('y:', y)
+            mOperate['element_info'] = strs.replace(x, y)
+        else:
+            return True
+
+
+
 
 # 封装常用的标签
 def elements_by(mOperate, cts):
