@@ -27,6 +27,90 @@
   operate_type: find_strs
   text: 饭团
 #输入值，发送聊天内容
+
+
+##########输入重复字符串，方便测试后续#######################
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 0
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 0
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 0
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 0
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+
+####################################################
+
+#测试文本发送内容
 -
   case_id: room_005
   case_name: room
@@ -49,7 +133,7 @@
 -
   case_id: room_008
   case_name: room
-  element_info: //android.support.v7.widget.RecyclerView//android.widget.RelativeLayout[@index='1']//android.widget.TextView
+  element_info: //android.support.v7.widget.RecyclerView//android.widget.RelativeLayout[@index='6']//android.widget.TextView
   find_type: by_xpath
   operate_type: find_strs
   text: 11223344
@@ -96,7 +180,7 @@
 -
   case_id: room_015
   case_name: room
-  element_info: //android.support.v7.widget.RecyclerView//android.widget.RelativeLayout[@index='2']//android.widget.TextView
+  element_info: //android.support.v7.widget.RecyclerView//android.widget.RelativeLayout[@index='6']//android.widget.TextView
   find_type: by_xpath
   operate_type: find_strs
   text: x 1
@@ -250,7 +334,7 @@
 -
   case_id: room_037
   case_name: room
-  element_info: //android.support.v7.widget.RecyclerView//android.widget.RelativeLayout[@index='5']//android.widget.TextView
+  element_info: //android.support.v7.widget.RecyclerView//android.widget.RelativeLayout[@index='6']//android.widget.TextView
   find_type: by_xpath
   operate_type: find_strs
   text: test12345
@@ -297,3 +381,146 @@
   find_type: by_id
   operate_type: system_button
   text: 4
+#检查房间内私信群组
+-
+  case_id: room_044
+  case_name: room
+  element_info: com.ccvideo:id/player_bottom_room_chat_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_045
+  case_name: room
+  element_info: com.ccvideo:id/msg_title_tv
+  find_type: by_id
+  operate_type: find_str
+  text: 易直播小秘书
+-
+  case_id: room_046
+  case_name: room
+  element_info: com.ccvideo:id/live_chat_group
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_047
+  case_name: room
+  element_info: com.ccvideo:id/live_chat_group
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_048
+  case_name: room
+  element_info: com.ccvideo:id/empty_title_tv
+  find_type: by_id
+  operate_type: find_strs
+  text: 没人说话？快找人聊聊去
+-
+  case_id: room_049
+  case_name: room
+  element_info: com.ccvideo:id/live_chat_ignore_unread
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_050
+  case_name: room
+  element_info: com.ccvideo:id/live_chat_ignore_unread
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_051
+  case_name: room
+  element_info: com.ccvideo:id/live_chat_ignore_unread
+  find_type: by_id
+  operate_type: system_button
+  text: 4
+
+
+
+#分享
+-
+  case_id: room_052
+  case_name: room
+  element_info: com.ccvideo:id/living_room_share_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_053
+  case_name: room
+  element_info: com.ccvideo:id/bottom_sheet_title
+  find_type: by_id
+  operate_type: find_strs
+  text: 分享
+ #复制链接
+-
+  case_id: room_054
+  case_name: room
+  element_info: //android.widget.GridView//android.widget.LinearLayout[@index='5']//android.widget.TextView
+  find_type: by_xpath
+  operate_type: click
+
+ #评论区发送表情与快速文本
+ #表情
+-
+  case_id: room_055
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_056
+  case_name: room
+  element_info: com.ccvideo:id/plus_iv
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_057
+  case_name: room
+  element_info: com.ccvideo:id/iv_expression
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_058
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+
+-
+  case_id: room_059
+  case_name: room
+  element_info: //android.support.v7.widget.RecyclerView//android.widget.RelativeLayout[@index='6']//android.widget.TextView
+  find_type: by_xpath
+  operate_type: find_strs
+  text: 微笑
+#快速文本
+-
+  case_id: room_060
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_061
+  case_name: room
+  element_info: com.ccvideo:id/tv_comment
+  find_type: by_id
+  operate_type: save_strs
+-
+  case_id: room_062
+  case_name: room
+  element_info: com.ccvideo:id/tv_comment
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_063
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: system_button
+  text: 4
+-
+  case_id: room_064
+  case_name: room
+  element_info: //android.support.v7.widget.RecyclerView//android.widget.RelativeLayout[@index='5']//android.widget.TextView
+  find_type: by_xpath
+  operate_type: diff_strs

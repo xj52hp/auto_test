@@ -25,9 +25,6 @@ class OperateElement():
              return False
         except:
             return False
-    # def findtoast(self,mOperate):
-    #     try:
-    #         WebDriverWait(self.driver, common.WAIT_TIME).until(EC.)
     def operate_element(self, mOperate):
         if OperateElement.findElement(self, mOperate):
             elements = {
@@ -41,6 +38,7 @@ class OperateElement():
                 common.FIND_STRS: lambda: find_strs(mOperate, self.driver),
                 common.SAVE_STRS: lambda: save_strs(mOperate, self.driver),
                 common.DIFF_NUM: lambda: diff_num(mOperate, self.driver),
+                common.DIFF_STRS: lambda: diff_strs(mOperate, self.driver),
                 common.SYSTEM_BUTTON: lambda: system_button(mOperate, self.driver),
                 common.FIND_TOAST: lambda: find_toast(mOperate, self.driver)
             }
@@ -77,10 +75,10 @@ def find_str(mOperate, cts):
         return None
 
 def find_strs(mOperate, cts):
+    find_strings = elements_by(mOperate, cts).text
+    print('find_strings:', find_strings, 'mOperate[text]:', mOperate['text'])
     try:
-        find_strings = elements_by(mOperate, cts).text
         if str(mOperate['text']) in str(find_strings):
-            print('find_strings:', find_strings, 'mOperate[text]:', mOperate['text'])
             return True
         else:
             return False
@@ -105,6 +103,16 @@ def diff_num(mOperate, cts):
             return True
         else:
             print('消耗异常:---->', int(x), '!=', int(y), '+', int(mOperate['cost_num']))
+            return False
+def diff_strs(mOperate, cts):
+        time.sleep(3)
+        x = gt.getTxt(temp_file)
+        y = elements_by(mOperate, cts).text
+        if x in y:
+            print('内容:---->', str(x), '=', str(y))
+            return True
+        else:
+            print('文本不一致:---->', str(x), '!=', str(y))
             return False
 
 
@@ -151,22 +159,24 @@ def opreate_swipe_up(mOperate, cts):
 
 
 def system_button(mOperate, cts):
-    print('按系统键位：---->', mOperate['text'])
-    webdriver.Remote.keyevent(cts, int(mOperate['text']), metastate=None)
-
-def find_toast(mOperate, cts):
-
-    print('mOperate["text"]：---->', mOperate['text'])
-    operate_click(mOperate, cts)
 
     try:
-        # aa = str(mOperate['text']
-        WebDriverWait(cts, 20, 1).until(EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, "没有未读消息")))
-
+        print('按系统键位：---->', mOperate['text'])
+        webdriver.Remote.keyevent(cts, int(mOperate['text']), metastate=None)
         return True
     except:
         return False
 
+def find_toast(mOperate, cts):
+
+    operate_click(mOperate, cts)
+
+    try:
+        print('mOperate["text"]：---->', mOperate['text'])
+        WebDriverWait(cts, 20, 1).until(EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, "没有未读消息")))
+        return True
+    except:
+        return False
 
 # 封装常用的标签
 def elements_by(mOperate, cts):

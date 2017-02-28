@@ -19,25 +19,25 @@ class AppCase(object):
 
         gh = operateYaml.getYam(f)
         for i in gh:
+            time.sleep(1)
             _operate = bo.OperateElement.operate_element(self, mOperate=i)
             print('i["case_id"]---->', i['case_id'], '_operate----->', _operate)
-            time.sleep(1)
-            if _operate is False:
-                print('join _operate is False!!!')
-                fh = fault_Handle(i)
-                print('i["element_info"]---->', i['element_info'], 'i["element_info"]---->', i['element_info'], 'fh---->', fh)
-                return fh
 
+            if _operate == False:
+                print('join _operate is False!!!')
+                fault_Handle(i)
 
         print('over---->')
+
+#处理异常
 def fault_Handle(i):
-    if i['case_name'] == True:
+    if i['case_name']:
         if i['case_name'] == "frist_login":
             print('call testLogin_Out---->')
             lo.testLogin_Out.test_login()
             return True
-        elif i['case_name'] == "room":
-            print('go on execcase---->')
+        if i['case_name'] == "room":
+            print('go on execcase---->', "i:", i)
             return True
     else:
         print('执行用例出现错误!!!')

@@ -39,9 +39,11 @@ class GetVariable(object):
     FIND_STRS = "find_strs"
     SAVE_STRS = "save_strs"
     DIFF_NUM = "diff_num"
+    DIFF_STRS = "diff_strs"
     WAIT_TIME = 20
     SYSTEM_BUTTON = "system_button"
     FIND_TOAST = "find_toast"
+    TEXT_IN_ELEMENT = "text_in_element"
 
 
     #selenium
