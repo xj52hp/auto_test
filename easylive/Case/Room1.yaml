@@ -23,29 +23,6 @@
 
 
 
-
-
-
-
--
-  case_id: room_005
-  case_name: room
-  element_info: com.ccvideo:id/living_room_comment_btn
-  find_type: by_id
-  operate_type: click
--
-  case_id: room_006
-  case_name: room
-  element_info: com.ccvideo:id/send_edt
-  find_type: by_id
-  operate_type: send_keys
-  text: 0
--
-  case_id: room_007
-  case_name: room
-  element_info: com.ccvideo:id/btn_send
-  find_type: by_id
-  operate_type: click
 -
   case_id: room_005
   case_name: room
@@ -85,6 +62,7 @@
   element_info: com.ccvideo:id/btn_send
   find_type: by_id
   operate_type: click
+
 -
   case_id: room_005
   case_name: room
@@ -104,6 +82,150 @@
   element_info: com.ccvideo:id/btn_send
   find_type: by_id
   operate_type: click
+
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 0
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 0
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 0
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 0
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 0
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 0
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+
+
+
+
+-
+  case_id: room_005
+  case_name: room
+  element_info: com.ccvideo:id/living_room_comment_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_006
+  case_name: room
+  element_info: com.ccvideo:id/send_edt
+  find_type: by_id
+  operate_type: send_keys
+  text: 0
+-
+  case_id: room_007
+  case_name: room
+  element_info: com.ccvideo:id/btn_send
+  find_type: by_id
+  operate_type: click
+
 
 
 

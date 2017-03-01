@@ -177,9 +177,11 @@ def find_toast(mOperate, cts):
     except:
         return False
 
+#通过xpath循环读取列表内容，直到匹配
 def comment_region(mOperate, cts):
 
     for i in range(7):
+        print('mOperate["element_info"]:', mOperate['element_info'])
         findstrs = find_strs(mOperate, cts)
         if findstrs != True:
             strs = mOperate['element_info']
@@ -187,11 +189,12 @@ def comment_region(mOperate, cts):
             y = str(int(x) + 1)
             x = 'index=\'' + x + '\''
             y = 'index=\'' + y + '\''
-            print('y:', y)
+
             mOperate['element_info'] = strs.replace(x, y)
+
         else:
             return True
-
+    return False
 
 
 
