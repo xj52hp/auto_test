@@ -24,7 +24,6 @@ class LoginAndroidTests(unittest.TestCase):
         #desired_caps['appActivity']='com.yizhibo.video.activity.LoginMainActivity'
         #desired_caps['appActivity']='com.yizhibo.video.activity.HomeTabActivity'
 
-        desired_caps['app'] = PATH('C:\\Users\\Administrator\\Desktop\\123.apk')
         #被测试的App在电脑上的位置
 
         self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
@@ -45,10 +44,18 @@ class LoginAndroidTests(unittest.TestCase):
         time.sleep(5)
         # alogin = self.driver.find_element_by_id('com.ccvideo:id/dialog_continue_tv').click()
 
-        blogin = self.driver.find_element_by_id('com.ccvideo:id/login_phone_iv').click()
+        self.driver.find_element_by_id('com.ccvideo:id/tab_message').click()
+        self.driver.find_element_by_id('com.ccvideo:id/group_chat_tv').click()
+        self.driver.find_element_by_id('com.ccvideo:id/msg_title_tv').click()
 
-        time.sleep(2)
-        self.myMethod('com.ccvideo:id/add_option_tv')
+        self.driver.find_element_by_id('com.ccvideo:id/et_sendmessage').click()
+
+
+        self.driver.find_element_by_id('com.ccvideo:id/et_sendmessage').send_keys('0')
+
+        self.driver.find_element_by_id('com.ccvideo:id/btn_send').click()
+
+
 
 
 

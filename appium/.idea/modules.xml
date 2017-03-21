@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/appium.iml" filepath="$PROJECT_DIR$/.idea/appium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../easylive/.idea/appium.iml" filepath="$PROJECT_DIR$/../easylive/.idea/appium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../appium_python/.idea/appium_python.iml" filepath="$PROJECT_DIR$/../appium_python/.idea/appium_python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../appiumn_auto/.idea/appium_study.iml" filepath="$PROJECT_DIR$/../appiumn_auto/.idea/appium_study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../exception/.idea/exception.iml" filepath="$PROJECT_DIR$/../exception/.idea/exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test/.idea/untitled.iml" filepath="$PROJECT_DIR$/../test/.idea/untitled.iml" />
     </modules>
   </component>
 </project>

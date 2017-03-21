@@ -8,8 +8,6 @@ from appium import webdriver
 from time import sleep
 import logging
 import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
 
 class LoginTests(unittest.TestCase):
 
