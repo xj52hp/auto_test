@@ -24,15 +24,6 @@ def get_men(pkg_name, devices):
         men2 = 0
     writeInfo(men2, PATH("../info/" + devices + "_men.pickle"))
     return men2
-    # men_s = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout.readlines()
-    # for info in men_s:
-    #     if len(info.split()) and info.split()[0].decode() == "TOTAL":
-    #         # print("men="+info.split()[1].decode())
-    #         men.append(int(info.split()[1].decode()))
-    #         # writeInfo(int(info.split()[1].decode()), PATH("../info/" + devices + "_men.pickle"))
-    #         print("----men----")
-    #         print(men)
-    #         return men
 
 
 # 得到fps
@@ -81,7 +72,7 @@ def get_fps(pkg_name, devices):
     writeInfo(_fps, PATH("../info/" + devices + "_fps.pickle"))
 
     # return (frame_count, jank_count, fps)
-    print("-----fps------")
+    print("---------fps--------")
     print(_fps)
 
 
@@ -106,7 +97,7 @@ def get_battery(devices):
 
 def get_pid(pkg_name, devices):
     cmd = "adb -s " + devices + " shell ps | findstr " + pkg_name
-    print("----get_pid-------")
+    print("------get_pid-------")
     print(cmd)
     pid = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
                            stderr=subprocess.PIPE).stdout.readlines()
@@ -128,11 +119,11 @@ def get_flow(pid, type, devices):
                 # 0 上传流量，1 下载流量
                 upflow = int(item.split()[1].decode())
                 downflow = int(item.split()[9].decode())
-                print("------flow---------")
+                print("--------flow---------")
                 print(upflow)
                 break
             if type == "gprs" and item.split()[0].decode() == "rmnet0:":  # gprs
-                print("-----flow---------")
+                print("--------flow---------")
                 upflow = int(item.split()[1].decode())
                 downflow = int(item.split()[9].decode())
                 print(upflow)
@@ -245,6 +236,8 @@ def cpu_rate(pid, cpukel, devices):
     processCpuTime3 = processCpuTime2 - processCpuTime1
 
     totalCpuTime1 = totalCpuTime(devices)
+    if totalCpuTime1 == 'NoneType':
+        print("--aaaa--------------totalCpuTime1=--------------" + totalCpuTime1)
     time.sleep(1)
     totalCpuTime2 = totalCpuTime(devices)
     totalCpuTime3 = (totalCpuTime2 - totalCpuTime1)*cpukel
@@ -257,16 +250,7 @@ def cpu_rate(pid, cpukel, devices):
     print(cpu)
 if __name__ == '__main__':
 
-    # cpu_rate("2749")
     pid = get_pid("com.jianshu.haruki", "DU2TAN15AJ049163")
-    # print(pid)
-    # get_flow(pid, "wifi", "DU2TAN15AJ049163")
-    # get_battery("DU2TAN15AJ049163")
-    # get_men("com.jianshu.haruki", "DU2TAN15AJ049163")
-    # print(get_cpu_kel())
-    # cpu_kel = get_cpu_kel("DU2TAN15AJ049163")
-    # print(cpu_rate(pid,cpu_kel,"DU2TAN15AJ049163"))
+
     get_flow(pid, "gprs", "emulator-5554")
-    # print(get_flow("com.jianshu.haruki", "gprs"))
-    # print(get_flow("com.jianshu.haruki", "gprs"))
-    # print(get_flow("com.jianshu.haruki", "gprs"))
+

@@ -1,4 +1,3 @@
-__author__ = 'Administrator'
 import os
 class base_file:
     #method(r,w,a)

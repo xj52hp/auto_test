@@ -1,4 +1,3 @@
-__author__ = 'shikun'
 import re
 import subprocess
 
@@ -8,7 +7,6 @@ def getModel( devices):
     result = {}
     cmd = "adb -s " + devices + " shell cat /system/build.prop"
     print(cmd)
-    # output = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout.readlines()
     output = subprocess.check_output(cmd).decode()
     result["release"] = re.findall("version.release=(\d\.\d)*", output, re.S)[0] #  Android 系统，如anroid 4.0
     result["phone_name"] = re.findall("ro.product.model=(\S+)*", output, re.S)[0] # 手机名
@@ -20,7 +18,6 @@ def get_men_total(devices):
     cmd = "adb -s " + devices + " shell cat /proc/meminfo"
     print(cmd)
     output = subprocess.check_output(cmd).split()
-    # item = [x.decode() for x in output]
     return  int(output[1].decode())
 
 # # 得到几核cpu

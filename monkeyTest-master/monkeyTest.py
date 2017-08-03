@@ -86,6 +86,7 @@ def runnerPool():
             devices_Pool.append(_app)
         pool = Pool(len(devices))
         pool.map(start, devices_Pool)
+        time.sleep(1)
         pool.close()
         pool.join()
     else:
@@ -120,7 +121,7 @@ def start(devicess):
             BaseMonitor.get_battery(devices)
             if monkeylog.read().count('Monkey finished') > 0:
                 endtime = datetime.datetime.now()
-                print(str(devices)+"测试完成咯")
+                print(str(devices)+"----------------测试完成咯--------------")
                 writeSum(1, path=PATH("./info/sumInfo.pickle"))
                 app[devices] ["header"]["beforeBattery"] = beforeBattery
                 app[devices]["header"]["afterBattery"] = BaseMonitor.get_battery(devices)
@@ -136,7 +137,7 @@ def start(devicess):
         report(readInfo(PATH("./info/info.pickle")))
         subprocess.Popen("taskkill /f /t /im adb.exe", shell=True)
         shutil.rmtree((PATH("./info/"))) # 删除持久化目录
-        print("------来吧------")
+        print("---------------全部测试完成-----------------")
 
 
 # 开始脚本测试

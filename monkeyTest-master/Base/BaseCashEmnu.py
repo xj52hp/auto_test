@@ -1,4 +1,4 @@
-__author__ = 'Administrator'
+
 
 ANR = "ANR"
 I_ANR = 0
