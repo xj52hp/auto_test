@@ -1,6 +1,6 @@
 
-from PO.variable import GetVariable as common
-from PO import operateYaml as gt
+from easylive.PO.variable import GetVariable as common
+from easylive.PO import operateYaml as gt
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -10,7 +10,7 @@ import time,re,os
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
-temp_file = "E:\PycharmProjects\easylive\Case\Casetemp.txt"
+temp_file = "./Casetemp.txt"
 
 class OperateElement():
     def __init__(self, driver=""):

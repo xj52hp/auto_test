@@ -1,6 +1,6 @@
 
 # -*- coding: utf-8 -*-
-from testDAL import appCase
+from easylive.testDAL import appCase
 
 class GetAppCase():
     # def __init__(self, test_module="", AppCaseInfo="", AppCase="",fps=[], cpu=[], men=[]):
