@@ -1,0 +1,26 @@
+---
+-
+  case_id: login_002
+  element_info: com.easyvaas.sqk:id/etName
+  find_type: by_id
+  operate_type: send_keys
+  text: 18911373631
+  case_name: frist_login
+-
+  case_name: login
+  element_info: com.easyvaas.sqk:id/etPwd
+  find_type: by_id
+  operate_type: send_keys
+  text: 111111
+#--- 点击登录---#
+-
+  case_name: login
+  element_info: com.easyvaas.sqk:id/tvLogin
+  find_type: by_id
+  operate_type: click
+-
+  case_name: login
+  element_info: com.easyvaas.sqk:id/rbMainPage
+  find_type: by_id
+  operate_type: find_str
+  text: 首页

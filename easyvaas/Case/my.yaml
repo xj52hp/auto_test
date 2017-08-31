@@ -1,0 +1,61 @@
+---
+#--- 点击登录---#
+-
+  case_name: login
+  element_info: com.easyvaas.sqk:id/tvLogin
+  find_type: by_id
+  operate_type: click
+#------
+-
+  case_name: my
+  element_info: com.easyvaas.sqk:id/rbMyPage
+  find_type: by_id
+  operate_type: click
+-
+  case_name: my
+  element_info: com.easyvaas.sqk:id/tvTitle
+  find_type: by_id
+  operate_type: find_str
+  text: 用户中心
+-
+  case_name: my
+  element_info: com.easyvaas.sqk:id/tvAsset
+  find_type: by_id
+  operate_type: find_strs
+  text: 元
+-
+  case_name: my
+  element_info: com.easyvaas.sqk:id/tvVideoCount
+  find_type: by_id
+  operate_type: find_strs
+  text: 个
+-
+  case_name: my
+  element_info: com.easyvaas.sqk:id/tvWatcherDuration
+  find_type: by_id
+  operate_type: find_strs
+  text: 分钟
+-
+  case_name: my
+  element_info: com.easyvaas.sqk:id/tvStorage
+  find_type: by_id
+  operate_type: find_strs
+  text: GB
+-
+  case_name: my
+  element_info: com.easyvaas.sqk:id/tvLiveCount
+  find_type: by_id
+  operate_type: find_strs
+  text: 场
+-
+  case_name: my
+  element_info: com.easyvaas.sqk:id/tvEarnings
+  find_type: by_id
+  operate_type: find_strs
+  text: 元
+-
+  case_name: my
+  element_info: com.easyvaas.sqk:id/textView
+  find_type: by_id
+  operate_type: find_strs
+  text: 视频个数

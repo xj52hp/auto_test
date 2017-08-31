@@ -25,9 +25,8 @@ class testroom(unittest.TestCase):
 
     def test_search(self):
 
-        home_login_yaml = PATH("/work/Pycharm_Product/auto_test/easylive/Case/Room.yaml")
+        home_login_yaml = PATH("/Users/lishuangqing/PycharmProjects/auto_test/easylive/Case/Room1.yaml")
         ac.AppCase.execCase(self, f=home_login_yaml)
-
 
 
     def tearDown(self):

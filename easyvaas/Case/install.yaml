@@ -1,0 +1,8 @@
+---
+-
+  case_id: install_001
+  case_name: frist_install
+  element_info: com.easyvaas.sqk:id/tv_phone
+  find_type: by_id
+  operate_type: find_str
+  text: 4006679596

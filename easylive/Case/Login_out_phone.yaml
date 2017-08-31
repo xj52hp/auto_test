@@ -1,31 +1,37 @@
 ---
 -
+  case_id: login_out_001
   case_name: login_out
   element_info: com.ccvideo:id/tab_bar_mine_btn
   find_type: by_id
   operate_type: click
 -
+  case_id: login_out_002
   case_name: login_out
   element_info: com.ccvideo:id/setting_tv
   find_type: by_id
   operate_type: click
 -
+  case_id: login_out_003
   case_name: login_out
   element_info: android.widget.LinearLayout
   find_type: class_name
   operate_type: swipeUp
   time: 3
 -
+  case_id: login_out_004
   case_name: login_out
   element_info: com.ccvideo:id/logout_btn
   find_type: by_id
   operate_type: click
 -
+  case_id: login_out_005
   case_name: login_out
   element_info: android:id/button1
   find_type: by_id
   operate_type: click
 -
+  case_id: login_out_006
   case_name: login_out
   element_info: com.ccvideo:id/login_phone_iv
   find_type: by_id

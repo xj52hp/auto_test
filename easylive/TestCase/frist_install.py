@@ -37,3 +37,5 @@ class testAPK_Install(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
     flp.testFrist_Login.test_login()
+    flp.testroom.test_search()
+    flp.testsearch.test_search()

@@ -1,0 +1,69 @@
+---
+#--- 点击登录---#
+-
+  case_id: login
+  element_info: com.easyvaas.sqk:id/tvLogin
+  find_type: by_id
+  operate_type: click
+-
+  case_name: my
+  element_info: com.easyvaas.sqk:id/rbMyPage
+  find_type: by_id
+  operate_type: click
+  
+#------------
+-
+  case_name: my_share_click
+  element_info: com.easyvaas.sqk:id/tvShare
+  find_type: by_id
+  operate_type: click
+-
+  case_name: my_share_to
+  element_info: com.easyvaas.sqk:id/bottom_sheet_title
+  find_type: by_id
+  operate_type: find_strs
+  text: 分享到
+-
+  case_name: my_share_copy
+  element_info: //android.widget.LinearLayout[@index='5']
+  find_type: by_xpath
+  operate_type: find_toast
+  text: 复制成功
+#------------
+
+#------------
+-
+  case_name: my_share_click
+  element_info: com.easyvaas.sqk:id/tvShare
+  find_type: by_id
+  operate_type: click
+-
+  case_name: my_share_to
+  element_info: com.easyvaas.sqk:id/bottom_sheet_title
+  find_type: by_id
+  operate_type: find_strs
+  text: 分享到
+-
+  case_name: my_share_weibo
+  element_info: //android.widget.LinearLayout[@index='2']
+  find_type: by_xpath
+  operate_type: click
+-
+  case_name: my_share_weibo
+  element_info: com.sina.weibo:id/edit_view
+  find_type: by_id
+  operate_type: find_strs
+  text: 个人主页
+-
+  case_name: my_share_weibo
+  element_info: com.sina.weibo:id/titleSave
+  find_type: by_id
+  operate_type: click
+
+-
+  case_name: my_home
+  element_info: com.easyvaas.sqk:id/tvTitle
+  find_type: by_id
+  operate_type: find_str
+  text: 用户中心
+#------------

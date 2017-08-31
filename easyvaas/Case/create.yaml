@@ -1,0 +1,60 @@
+---
+#--- 点击登录---#
+-
+  case_name: login
+  element_info: com.easyvaas.sqk:id/tvLogin
+  find_type: by_id
+  operate_type: click
+#---第一分支，点击加号然后点 X 取消
+-
+  case_name: create_click
+  element_info: com.easyvaas.sqk:id/ivAdd
+  find_type: by_id
+  operate_type: click
+-
+  case_name: create_cancel
+  element_info: com.easyvaas.sqk:id/ivCancel
+  find_type: by_id
+  operate_type: click
+#--- 第二分支，点击加号创建直播
+-
+  case_name: create_live
+  element_info: com.easyvaas.sqk:id/ivAdd
+  find_type: by_id
+  operate_type: click
+-
+  case_name: create_live_click
+  element_info: com.easyvaas.sqk:id/tvAddLive
+  find_type: by_id
+  operate_type: click
+-
+  case_name: create_live_name
+  element_info: com.easyvaas.sqk:id/etName
+  find_type: by_id
+  operate_type: send_keys
+  text: 123www
+-
+  case_name: create_live
+  element_info: com.easyvaas.sqk:id/tv_create_now
+  find_type: by_id
+  operate_type: click
+
+-
+  case_name: swipe_up
+  element_info: com.easyvaas.sqk:id/recycler_view
+  find_type: by_id
+  operate_type: swipeUp
+  num: 1
+-
+  case_name: live_list
+  element_info: //android.widget.TextView[contains(@text,'123www')]
+  find_type: by_xpath
+  operate_type: find_strs
+  text: 123www
+-
+  case_name: live_day
+  element_info: //android.widget.TextView[contains(@text,'2017-08-31')]
+  find_type: by_xpath
+  operate_type: find_strs
+  text: 2017-08-31
+

@@ -18,10 +18,12 @@ class AppCase(object):
         time.sleep(20)
 
         gh = operateYaml.getYam(f)
+        print(gh)
         for i in gh:
             time.sleep(1)
             _operate = bo.OperateElement.operate_element(self, mOperate=i)
-            print('i["case_id"]---->', i['case_id'], '_operate----->', _operate)
+            # if i['case_id'] is True :
+            #     print('i["case_id"]---->', i['case_id'], '_operate----->', _operate)
 
             if _operate == False:
                 print('join _operate is False!!!')

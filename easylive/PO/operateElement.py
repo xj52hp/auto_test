@@ -158,7 +158,6 @@ def opreate_swipe_up(mOperate, cts):
         cts.swipe(int(width/2), int(height*0.75), int(width/2), int(height*0.25), 500)
         time.sleep(1)
 
-
 def system_button(mOperate, cts):
 
     try:

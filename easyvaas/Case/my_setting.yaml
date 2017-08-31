@@ -1,0 +1,47 @@
+---
+#--- 点击登录---#
+-
+  case_name: login
+  element_info: com.easyvaas.sqk:id/tvLogin
+  find_type: by_id
+  operate_type: click
+-
+  case_name: my
+  element_info: com.easyvaas.sqk:id/rbMyPage
+  find_type: by_id
+  operate_type: click
+  
+#------------
+-
+  case_name: my_setting
+  element_info: com.easyvaas.sqk:id/ivOperation
+  find_type: by_id
+  operate_type: click
+-
+  case_name: my_setting_about
+  element_info: com.easyvaas.sqk:id/flAbout
+  find_type: by_id
+  operate_type: click
+-
+  case_name: my_setting_about_callme
+  element_info: com.easyvaas.sqk:id/tv_version
+  find_type: by_id
+  operate_type: find_strs
+  text: 1.7.0
+-
+  case_name: my_setting_about_callme_back
+  element_info: com.easyvaas.sqk:id/ivBack
+  find_type: by_id
+  operate_type: click
+#-------------
+-
+  case_name: my_setting_evaluate
+  element_info: //android.widget.FrameLayout[@index='2']//android.widget.TextView
+  find_type: by_xpath
+  operate_type: comment_region
+  text: 评价
+-
+  case_name: my_setting_evaluate_back
+  element_info: com.easyvaas.sqk:id/ivBack
+  find_type: by_id
+  operate_type: click
