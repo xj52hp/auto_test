@@ -33,6 +33,7 @@ class OperateElement():
             elements = {
                 common.CLICK: lambda: operate_click(mOperate, self.driver),
                 common.SEND_KEYS: lambda: send_keys(mOperate, self.driver),
+                common.ATTRIBUTES: lambda: operate_attributes(mOperate, self.driver),
                 common.SWIPELEFT: lambda: opreate_swipe_left(self, mOperate),
                 common.SWIPEDOWN: lambda: opreate_swipe_down(self, mOperate),
                 common.SWIPEUP: lambda: opreate_swipe_up(self, mOperate),
@@ -58,38 +59,48 @@ def operate_click(mOperate, cts):
         elements_by(mOperate, cts)[mOperate["index"]].click()
     if common.SELENIUM_APPIUM == common.APPIUM:
         pass
+#断言控件属性
+def operate_attributes(mOperate, cts):
+    try:
+        va = elements_by(mOperate, cts).get_attribute(mOperate['attributes_key'])
+        print("预期:          ", str.lower(mOperate['text']))
+        assert_that(str.lower(va)[0:1]).is_equal_to(str.lower(mOperate['text']))
+        return True
+    except AssertionError as e:
+        print("实际:          不相同或者元素的属性不正确:", e)
+        return False
 
 def send_keys(mOperate, cts):
     try:
-        elements_by(mOperate, cts).send_keys(mOperate["text"])
-        print('预期:', mOperate["text"])
+        elements_by(mOperate, cts).send_text(mOperate["text"])
+        print('预期:          ', mOperate["text"])
         return True
     except:
-        print('输入错误')
+        print('实际:          输入错误')
         return False
 
 def find_str(mOperate, cts):
     find_string = elements_by(mOperate, cts).text
     try:
         assert_that(str(find_string)).is_equal_to(str(mOperate['text']))
-        print('预期:', find_string)
+        print('预期:          ', find_string)
         return True
     except AssertionError as e:
-        print("不相同---->", e)
+        print("预期:          相同: ", e)
         return False
 
 def find_strs(mOperate, cts):
     find_strings = elements_by(mOperate, cts).text
     try:
         assert_that(str(mOperate['text'])).is_subset_of(str(find_strings))
-        print('预期:', find_strings)
+        print('预期:          ', find_strings)
         return True
     except AssertionError as e:
-        print("不包含---->", e)
+        print("预期:          包含: ", e)
         return False
 def save_strs(mOperate, cts):
     bo = gt.writeTxt(temp_file, elements_by(mOperate, cts).text)
-    print('预期:', mOperate["text"])
+    print('预期:          ', mOperate["text"])
     return bo
 
 def diff_num(mOperate, cts):
@@ -102,10 +113,10 @@ def diff_num(mOperate, cts):
             x = re.sub("\D", "", elements_by(mOperate, cts).text)
 
         if int(x) == int(y) + int(mOperate['cost_num']):
-            print('变化:---->', int(mOperate['cost_num']))
+            print('预期:          变化: ', int(mOperate['cost_num']))
             return True
         else:
-            print('消耗异常:---->', int(x), '!=', int(y), '+', int(mOperate['cost_num']))
+            print('实际:          消耗异常: ', int(x), '!=', int(y), '+', int(mOperate['cost_num']))
             return False
 def diff_strs(mOperate, cts):
     time.sleep(3)
@@ -113,17 +124,17 @@ def diff_strs(mOperate, cts):
     y = elements_by(mOperate, cts).text
     try:
         assert_that(str(x)).is_subset_of(str(y))
-        print('预期:---->', str(x), '=', str(y))
+        print('预期:          ', str(x), '=', str(y))
         return True
     except AssertionError as e:
-        print('文本不一致:---->', str(x), '!=', str(y))
+        print('预期:          文本不一致: ', str(x), '!=', str(y))
         return False
 
 
 # 手势向左侧滑动
 def opreate_swipe_left(mOperate, cts):
     time.sleep(1)
-    print('输入：手势向左侧滑动')
+    print('预期:          手势向左侧滑动')
     l = getSize(cts)
     for i in range(int(mOperate["num"])):
         cts.driver.swipe(l[0] / 0.75, l[1] / 2, l[0] / 0.55, l[1] / 2, 1500)
@@ -132,7 +143,7 @@ def opreate_swipe_left(mOperate, cts):
 # 手势向右侧滑动
 def opreate_swipe_right(mOperate, cts):
     time.sleep(1)
-    print('输入：手势向右侧滑动')
+    print('预期:          手势向右侧滑动')
     l = getSize(cts)
     for i in range(int(mOperate["num"])):
         cts.driver.swipe(l[0] / 0.55, l[1] / 2, l[0] / 0.75, l[1] / 2, 1500)
@@ -141,7 +152,7 @@ def opreate_swipe_right(mOperate, cts):
 # 手势向下拉
 def opreate_swipe_down(mOperate, cts):
     time.sleep(1)
-    print('输入：手势向下拉')
+    print('预期:          手势向下拉')
     l = getSize(cts)
     for i in range(int(mOperate["num"])):
         cts.driver.swipe(l[0] / 2, l[1] * 0.55, l[0] / 2, l[1] * 0.75, 1500)
@@ -149,7 +160,7 @@ def opreate_swipe_down(mOperate, cts):
 # 手势向上推
 def opreate_swipe_up(cts, mOperate):
     time.sleep(1)
-    print('输入：手势向上推')
+    print('预期:          手势向上推')
     l = getSize(cts)
     for i in range(int(mOperate["num"])):
         cts.driver.swipe(l[0] / 2, l[1] * 0.75, l[0] / 2, l[1] * 0.55, 1500)
@@ -171,17 +182,17 @@ def getNowday(mOperate, cts):
     app_get_day = elements_by(mOperate, cts).now_day
     try:
         assert_that(str(mOperate['now_day'])).is_equal_to(str(system_get_day))
-        print('预期:', system_get_day)
-        print('实际:', app_get_day)
+        print('预期:          ', system_get_day)
+        print('实际:          ', app_get_day)
         return True
     except AssertionError as e:
-        print("不相同---->", e)
+        print("预期:          不相同: ", e)
         return False
 
 def system_button(mOperate, cts):
 
     try:
-        print('按系统键位：---->', mOperate['text'])
+        print('预期:          按系统键位: ', mOperate['text'])
         webdriver.Remote.keyevent(cts, int(mOperate['text']), metastate=None)
         return True
     except:
@@ -190,7 +201,7 @@ def system_button(mOperate, cts):
 def find_toast(mOperate, cts):
     operate_click(mOperate, cts)
     try:
-        print('mOperate["text"]：---->', mOperate['text'])
+        # print('mOperate["text"]：---->', mOperate['text'])
         WebDriverWait(cts, 10).until(EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, "没有消息")))
         return True
     except:
@@ -198,10 +209,10 @@ def find_toast(mOperate, cts):
 
 #通过xpath循环读取列表内容，直到匹配
 def comment_region(mOperate, cts):
-    print("1-----1")
+    # print("1-----1")
     try:
         for i in range(int(mOperate['num'])):
-            print('mOperate["element_info"]:', mOperate['element_info'])
+            # print('mOperate["element_info"]:', mOperate['element_info'])
             findstrs = find_strs(mOperate, cts)
             if findstrs == False:
                 strs = mOperate['element_info']
@@ -210,7 +221,7 @@ def comment_region(mOperate, cts):
                 y = str(int(x) + 1)
                 x = 'index=\'' + x + '\''
                 y = 'index=\'' + y + '\''
-                print('strs-->', strs)
+                # print('strs-->', strs)
                 mOperate['element_info'] = strs.replace(x, y)
 
             else:
@@ -220,10 +231,10 @@ def comment_region(mOperate, cts):
 
 # 通过xpath循环读取列表内容，直到匹配
 def comment_region_father(mOperate, cts):
-    print("1-----1")
+    # print("1-----1")
     try:
         for i in range(int(mOperate['num'])):
-            print('mOperate["element_info"]:', mOperate['element_info'])
+            # print('mOperate["element_info"]:', mOperate['element_info'])
             findstrs = find_strs(mOperate, cts)
             if findstrs == False:
                 strs = mOperate['element_info']
@@ -232,7 +243,7 @@ def comment_region_father(mOperate, cts):
                 y = str(int(x) + 1)
                 x = 'index=\'' + x + '\''
                 y = 'index=\'' + y + '\''
-                print('strs-->', strs)
+                # print('strs-->', strs)
                 mOperate['element_info'] = strs.replace(x, y)
 
             else:

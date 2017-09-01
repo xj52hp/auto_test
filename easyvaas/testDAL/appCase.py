@@ -25,9 +25,12 @@ class AppCase(object):
                 i['case_name'] = ''
             if 'case_id' not in i:
                 i['case_id'] = ''
-
-            print("输入：", i['case_id'], i['case_name'], i['operate_type'], i['text'])
+            if 'attributes_key' not in i:
+                i['attributes_key'] = ''
+            print("用例名称:       ", i['case_name'])
+            print("输入:          ", i['attributes_key'], i['text'])
             _operate = bo.OperateElement.operate_element(self, mOperate=i)
-            print("执行：", _operate)
+            print("执行结果:       ", _operate)
+            print("-------------------------")
 
         print(i['case_name'], 'Case over---->', _operate)

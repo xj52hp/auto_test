@@ -14,7 +14,8 @@ suite = unittest.TestSuite()
 # suite.addTest(tc.TestCase('test_my_setting'))
 # suite.addTest(tc.TestCase('test_my_share'))
 # suite.addTest(tc.TestCase('test_home'))
-suite.addTest(tc.TestCase('test_create'))
+# suite.addTest(tc.TestCase('test_create'))
+suite.addTest(tc.TestCase('test_live'))
 
 if __name__=='__main__':
     #执行测试

@@ -1,0 +1,157 @@
+---
+#--- 点击登录---#
+-
+  case_name: login
+  element_info: com.easyvaas.sqk:id/tvLogin
+  find_type: by_id
+  operate_type: click
+#--- 进入直播间
+-
+  case_name: live_click
+  element_info: //android.widget.TextView[contains(@text,'预告')]
+  find_type: by_xpath
+  operate_type: click
+#------------闪光灯&摄像头---------------
+-
+  case_name: 检查闪光灯
+  element_info: com.easyvaas.sqk:id/liveSwitchFlash
+  find_type: by_id
+  operate_type: attributes
+  attributes_key: enabled
+  text: f
+-
+  case_name: 翻转摄像头(朝下)
+  element_info: com.easyvaas.sqk:id/liveSwitchCameraCb
+  find_type: by_id
+  operate_type: click
+-
+  case_name: 检查摄像头的变化(朝下)
+  element_info: com.easyvaas.sqk:id/liveSwitchCameraCb
+  find_type: by_id
+  operate_type: attributes
+  attributes_key: checked
+  text: f
+-
+  case_name: 检查闪光灯状态是否可用
+  element_info: com.easyvaas.sqk:id/liveSwitchFlash
+  find_type: by_id
+  operate_type: attributes
+  attributes_key: enabled
+  text: t
+-
+  case_name: 开启闪光灯
+  element_info: com.easyvaas.sqk:id/liveSwitchFlash
+  find_type: by_id
+  operate_type: click
+-
+  case_name: 检查闪光灯是否开启
+  element_info: com.easyvaas.sqk:id/liveSwitchFlash
+  find_type: by_id
+  operate_type: attributes
+  attributes_key: checked
+  text: t
+-
+  case_name: 关闭闪光灯
+  element_info: com.easyvaas.sqk:id/liveSwitchFlash
+  find_type: by_id
+  operate_type: click
+-
+  case_name: 检查闪光灯是否关闭
+  element_info: com.easyvaas.sqk:id/liveSwitchFlash
+  find_type: by_id
+  operate_type: attributes
+  attributes_key: checked
+  text: f
+-
+  case_name: 翻转摄像头(朝上)
+  element_info: com.easyvaas.sqk:id/liveSwitchCameraCb
+  find_type: by_id
+  operate_type: click
+-
+  case_name: 检查摄像头的变化(朝上)
+  element_info: com.easyvaas.sqk:id/liveSwitchCameraCb
+  find_type: by_id
+  operate_type: attributes
+  attributes_key: checked
+  text: t
+-
+  case_name: 检查闪光灯状态是否可用
+  element_info: com.easyvaas.sqk:id/liveSwitchFlash
+  find_type: by_id
+  operate_type: attributes
+  attributes_key: enabled
+  text: f
+#------------静音---------------
+-
+  case_name: 判断静音状态(默认取消静音)
+  element_info: com.easyvaas.sqk:id/liveMuteCb
+  find_type: by_id
+  operate_type: attributes
+  attributes_key: checked
+  text: f
+-
+  case_name: 设置为静音
+  element_info: com.easyvaas.sqk:id/liveMuteCb
+  find_type: by_id
+  operate_type: click
+-
+  case_name: 判断静音是否成功
+  element_info: com.easyvaas.sqk:id/liveMuteCb
+  find_type: by_id
+  operate_type: attributes
+  attributes_key: checked
+  text: t
+-
+  case_name: 取消静音
+  element_info: com.easyvaas.sqk:id/liveMuteCb
+  find_type: by_id
+  operate_type: click
+#------------美颜---------------
+-
+  case_name: 判断美颜状态(默认开启)
+  element_info: com.easyvaas.sqk:id/liveBeautyCb
+  find_type: by_id
+  operate_type: attributes
+  attributes_key: checked
+  text: t
+-
+  case_name: 取消美颜
+  element_info: com.easyvaas.sqk:id/liveBeautyCb
+  find_type: by_id
+  operate_type: click
+-
+  case_name: 判断取消美颜状态
+  element_info: com.easyvaas.sqk:id/liveBeautyCb
+  find_type: by_id
+  operate_type: attributes
+  attributes_key: checked
+  text: f
+#------------分享---------------
+-
+  case_name: 点击分享
+  element_info: com.easyvaas.sqk:id/ivShare
+  find_type: by_id
+  operate_type: click
+-
+  case_name: 点击微博分享
+  element_info: com.easyvaas.sqk:id/iv_weibo
+  find_type: by_id
+  operate_type: click
+-
+  case_name: 检查微博分享内容
+  element_info: com.sina.weibo:id/edit_view
+  find_type: by_id
+  operate_type: find_strs
+  text: https://3qk.easyvaas.com/show/play/index?vid=
+-
+  case_name: 点击微博分享发送按钮
+  element_info: com.sina.weibo:id/titleSave
+  find_type: by_id
+  operate_type: click
+-
+  case_name: 发送微博后返回界面检查
+  element_info: com.easyvaas.sqk:id/tvStream
+  find_type: by_id
+  operate_type: find_str
+  text: 开始直播
+#------------复制分享链接在输入框中验证---------------

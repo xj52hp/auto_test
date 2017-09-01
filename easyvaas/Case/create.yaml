@@ -57,4 +57,16 @@
   find_type: by_xpath
   operate_type: find_strs
   text: 2017-08-31
+-
+  case_name: live_status
+  element_info: //android.widget.TextView[contains(@text,'预告')]
+  find_type: by_xpath
+  operate_type: find_strs
+  text: 预告
+-
+  case_name: live_detail
+  element_info: //android.widget.TextView[contains(@text,'查看详情')]
+  find_type: by_xpath
+  operate_type: find_strs
+  text: 查看详情
 

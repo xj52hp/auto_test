@@ -24,6 +24,8 @@ class GetVariable(object):
     CHROME = "chrome"
 
     CLICK = "click"
+    ATTRIBUTES = "attributes"
+    #attributes_key 传入元素的属性,例如name id  enabled等,传入的text 如果使用False和True的,请使用F和T或者f和t表示
     DRIVER = ""
     TAP = "tap"
     SWIPELEFT = "swipeLeft"
