@@ -43,7 +43,7 @@ class OperateElement():
                 common.SAVE_STRS: lambda: save_strs(mOperate, self.driver),
                 common.DIFF_NUM: lambda: diff_num(mOperate, self.driver),
                 common.DIFF_STRS: lambda: diff_strs(mOperate, self.driver),
-                common.SYSTEM_BUTTON: lambda: system_button(mOperate, self.driver),
+                common.SYSTEM_BUTTON: lambda: system_button(mOperate, self),
                 common.COMMENT_REGION: lambda: comment_region(mOperate, self.driver),
                 common.NOW_DAY: lambda: getNowday(mOperate, self.driver),
                 common.FIND_TOAST: lambda: find_toast(mOperate, self.driver)
@@ -72,8 +72,8 @@ def operate_attributes(mOperate, cts):
 
 def send_keys(mOperate, cts):
     try:
-        elements_by(mOperate, cts).send_text(mOperate["text"])
-        print('预期:          ', mOperate["text"])
+        elements_by(mOperate, cts).set_text(mOperate['text'])
+        print('预期:          ', mOperate['text'])
         return True
     except:
         print('实际:          输入错误')
@@ -172,8 +172,6 @@ def getSize(cts):
     height = cts.driver.get_window_size()["height"]
     return (width, height)
 
-
-
 #----------------------------------
 # 获取当前日期与取到的日期进行对比，成功返回 True，不成功返回 False，只取到日
 def getNowday(mOperate, cts):
@@ -190,10 +188,11 @@ def getNowday(mOperate, cts):
         return False
 
 def system_button(mOperate, cts):
-
     try:
-        print('预期:          按系统键位: ', mOperate['text'])
-        webdriver.Remote.keyevent(cts, int(mOperate['text']), metastate=None)
+        # print('预期:          按系统键位: ', mOperate['text'])
+        # webdriver.Remote.keyevent(int(mOperate['text']))
+        # webdriver.Remote.back()
+        webdriver.Remote.execute_script(4)
         return True
     except:
         return False
@@ -228,30 +227,6 @@ def comment_region(mOperate, cts):
                 return True
     except:
         return False
-
-# 通过xpath循环读取列表内容，直到匹配
-def comment_region_father(mOperate, cts):
-    # print("1-----1")
-    try:
-        for i in range(int(mOperate['num'])):
-            # print('mOperate["element_info"]:', mOperate['element_info'])
-            findstrs = find_strs(mOperate, cts)
-            if findstrs == False:
-                strs = mOperate['element_info']
-                print(str)
-                x = re.sub("\D", "", strs.split('=')[-1].split(']')[0])
-                y = str(int(x) + 1)
-                x = 'index=\'' + x + '\''
-                y = 'index=\'' + y + '\''
-                # print('strs-->', strs)
-                mOperate['element_info'] = strs.replace(x, y)
-
-            else:
-                return True
-            return False
-    except:
-        pass
-
 
 # 封装常用的标签
 def elements_by(mOperate, cts):
