@@ -44,7 +44,10 @@ class TestCase(unittest.TestCase):
         home_yaml = PATH("../Case/create.yaml")
         ac.AppCase.execCase(self, f=home_yaml)
     def test_live_setting(self):
-        home_yaml = PATH("../Case/test.yaml")
+        home_yaml = PATH("../Case/live_setting.yaml")
+        ac.AppCase.execCase(self, f=home_yaml)
+    def test_live_detail(self):
+        home_yaml = PATH("../Case/live_detail.yaml")
         ac.AppCase.execCase(self, f=home_yaml)
 
 if __name__ == "__main__":

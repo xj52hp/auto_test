@@ -19,9 +19,10 @@
   operate_type: click
 -
   case_name: 系统返回键
-  element_info:
-  find_type:
+  element_info: com.easyvaas.sqk:id/rb_good
+  find_type: by_id
   operate_type: system_button
+  text: 4
 -
   case_name: 点击评论按钮
   element_info: com.easyvaas.sqk:id/ivChat

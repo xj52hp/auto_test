@@ -4,7 +4,7 @@ import pickle
 import subprocess
 import shutil
 
-from Base.BasePickle import writeInfo, writeSum, readInfo
+from monkeyTest-master.Base.BasePickle import writeInfo, writeSum, readInfo
 from Base.BaseWriteReport import report
 
 import datetime

@@ -1,0 +1,74 @@
+---
+#--- 点击登录---#
+-
+  case_name: login
+  element_info: com.easyvaas.sqk:id/tvLogin
+  find_type: by_id
+  operate_type: click
+#--- 获取直播标题
+-
+  case_name: live_click
+  element_info: com.easyvaas.sqk:id/tv_name
+  find_type: by_id
+  operate_type: save_strs
+#--- 进入详情页
+-
+  case_name: live_click
+  element_info: com.easyvaas.sqk:id/tv_detail
+  find_type: by_id
+  operate_type: click
+#------------检查直播详情信息---------------
+
+-
+  case_name: 检查直播title
+  element_info: com.easyvaas.sqk:id/tvTitle
+  find_type: by_id
+  operate_type: find_strs
+  text: 直播详情
+-
+  case_name: 检查直播标题
+  element_info: com.easyvaas.sqk:id/tvName
+  find_type: by_id
+  operate_type: diff_strs
+-
+  case_name: 检查最高并发
+  element_info: com.easyvaas.sqk:id/tvConcurrence
+  find_type: by_id
+  operate_type: find_strs
+  text: 人
+-
+  case_name: 检查直播观看次数
+  element_info: com.easyvaas.sqk:id/tvLiveWatchCount
+  find_type: by_id
+  operate_type: find_strs
+  text: 次
+-
+  case_name: 检查回放观看次数
+  element_info: com.easyvaas.sqk:id/tvPlaybackWatchCount
+  find_type: by_id
+  operate_type: find_strs
+  text: 次
+-
+  case_name: 检查直播观看终端统计
+  element_info: //android.widget.TextView[contains(@text,'直播观看终端')]
+  find_type: by_xpath
+  operate_type: find_strs
+  text: 直播观看终端
+-
+  case_name: 滑屏到底检查其他功能统计
+  element_info: com.easyvaas.sqk:id/tvConcurrence
+  find_type: by_id
+  operate_type: swipeUp
+  num: 5
+-
+  case_name: 检查地域排行统计
+  element_info: //android.widget.TextView[contains(@text,'地域排行')]
+  find_type: by_xpath
+  operate_type: find_strs
+  text: 地域排行
+-
+  case_name: 检查观看人数统计
+  element_info: //android.widget.TextView[contains(@text,'观看人数')]
+  find_type: by_xpath
+  operate_type: find_strs
+  text: 观看人数

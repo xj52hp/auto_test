@@ -5,7 +5,6 @@ from easyvaas.PO import operateYaml as gt
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from appium import webdriver
 import selenium.common.exceptions
 import time,re,os
 
@@ -43,7 +42,7 @@ class OperateElement():
                 common.SAVE_STRS: lambda: save_strs(mOperate, self.driver),
                 common.DIFF_NUM: lambda: diff_num(mOperate, self.driver),
                 common.DIFF_STRS: lambda: diff_strs(mOperate, self.driver),
-                common.SYSTEM_BUTTON: lambda: system_button(mOperate, self),
+                common.SYSTEM_BUTTON: lambda: system_button(mOperate, self.driver),
                 common.COMMENT_REGION: lambda: comment_region(mOperate, self.driver),
                 common.NOW_DAY: lambda: getNowday(mOperate, self.driver),
                 common.FIND_TOAST: lambda: find_toast(mOperate, self.driver)
@@ -100,7 +99,7 @@ def find_strs(mOperate, cts):
         return False
 def save_strs(mOperate, cts):
     bo = gt.writeTxt(temp_file, elements_by(mOperate, cts).text)
-    print('预期:          ', mOperate["text"])
+    print('预期:          ', elements_by(mOperate, cts).text)
     return bo
 
 def diff_num(mOperate, cts):
@@ -189,10 +188,8 @@ def getNowday(mOperate, cts):
 
 def system_button(mOperate, cts):
     try:
-        # print('预期:          按系统键位: ', mOperate['text'])
-        # webdriver.Remote.keyevent(int(mOperate['text']))
-        # webdriver.Remote.back()
-        webdriver.Remote.execute_script(4)
+        print('预期:          按系统键位: ', mOperate['text'])
+        cts.keyevent(keycode=mOperate['text'])
         return True
     except:
         return False
