@@ -4,7 +4,7 @@
   request_method: get
   server_info: release
   fun_name: userlogin
-  text: ok
+  retval: 'ok'
   key_1: authtype
   value_1: phone
   key_2: token

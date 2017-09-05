@@ -2,9 +2,9 @@
 
 from api.PO.variable import GetVariable as common
 from api.PO.operateurl import Getoperateurl as gou
-from api.PO.josn import Getjosn as gs
+from api.PO.json import Getjson as gs
 import requests
-import time,re,os
+import os
 
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
@@ -15,13 +15,13 @@ class OperateElement():
 
     def request_method(self, mOperate):
         dict = {
-            common.GET:request_get(self, mOperate),
-            common.POST:request_post(mOperate, self)
+            common.GET:request_get(self, mOperate)
+            # common.POST:request_post(self, mOperate)
         }
+        return dict
 def request_get(cts, mOperate):
         url = gou.get_operateurl(cts, mOperate)
-        # print(requests.get(url).text)
-        gs.get_josn(cts, requests.get(url).text)
-def request_post(cts, mOperate):
-        url = gou.get_operateurl(cts, mOperate)
-        print(requests.post(url).text)
+        return gs.get_json(cts, mOperate, requests.get(url).text)
+# def request_post(cts, mOperate):
+#         url = gou.get_operateurl(cts, mOperate)
+#         print(requests.post(url).text)
