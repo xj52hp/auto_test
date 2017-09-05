@@ -9,7 +9,8 @@ class Getjson():
         param = json.loads(json_T)
         try:
             if assert_that(str(param['retval'])).is_equal_to(str(mOperate['retval'])):
-                print("实际:            ", str(param['retval']))
+                print("实际retval:      ", str(param['retval']))
+                print("实际reterr:      ", str(param['reterr']))
                 save_retinfo(self, param)
                 return True
             else:

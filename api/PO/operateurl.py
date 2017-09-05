@@ -8,6 +8,6 @@ class Getoperateurl():
     def get_operateurl(self, mOperate):
         serverinfo = gsi.get_serverinfo(self, mOperate)
         param = gp.get_param(self, mOperate)
-        print('组合PARAM:       ', param)
+        # print('组合PARAM:       ', param)
         url = serverinfo + str(mOperate['fun_name']) + '?' + param
         return url

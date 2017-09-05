@@ -26,6 +26,7 @@ class AppCase(object):
             if 'case_name' not in i:
                 i['case_name'] = '该用例木有名字'
             try:
+                print("接口名称:         ", i['case_name'])
                 print("接口名称:         ", i['fun_name'])
                 print("类型:            ", i['request_method'])
                 print("连接服务:         ", i['server_info'])
