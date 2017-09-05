@@ -9,5 +9,5 @@ class Getoperateurl():
         serverinfo = gsi.get_serverinfo(self, mOperate)
         param = gp.get_param(self, mOperate)
         print('组合PARAM:       ', param)
-        url = serverinfo + mOperate['fun_name'] + '?' + param
+        url = serverinfo + str(mOperate['fun_name']) + '?' + param
         return url

@@ -15,13 +15,14 @@ class OperateElement():
 
     def request_method(self, mOperate):
         dict = {
-            common.GET:request_get(self, mOperate)
-            # common.POST:request_post(self, mOperate)
+            common.GET: lambda: request_get(self, mOperate),
+            common.POST: lambda: request_post(self, mOperate)
         }
-        return dict
+        return dict[mOperate['request_method']]()
 def request_get(cts, mOperate):
         url = gou.get_operateurl(cts, mOperate)
         return gs.get_json(cts, mOperate, requests.get(url).text)
-# def request_post(cts, mOperate):
-#         url = gou.get_operateurl(cts, mOperate)
-#         print(requests.post(url).text)
+
+def request_post(cts, mOperate):
+        url = gou.get_operateurl(cts, mOperate)
+        print(requests.post(url).text)

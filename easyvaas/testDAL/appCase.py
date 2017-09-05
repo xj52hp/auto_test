@@ -16,7 +16,7 @@ class AppCase(object):
         time.sleep(20)
 
         gh = operateYaml.getYam(f)
-        print(gh)
+        # print(gh)
         for i in gh:
             time.sleep(1)
             if 'text' not in i:
