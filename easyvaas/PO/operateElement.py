@@ -11,7 +11,7 @@ import time,re,os
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
-temp_file = "./Casetemp.txt"
+temp_file = "../Casetemp.txt"
 
 class OperateElement():
     def __init__(self, driver=""):

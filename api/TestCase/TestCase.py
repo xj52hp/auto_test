@@ -14,6 +14,5 @@ PATH = lambda p: os.path.abspath(
 class TestCase(unittest.TestCase):
 
     def test_login(self):
-        print(PATH("../Case/login.yaml"))
         home_yaml = PATH("../Case/login.yaml")
         ac.AppCase.execCase(self, f=home_yaml)

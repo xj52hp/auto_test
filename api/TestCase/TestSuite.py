@@ -40,7 +40,6 @@ if __name__=='__main__':
         os.mkdir(tdresult)
     #以写文本文件或写二进制文件的模式打开测试报告文件
     filename = tdresult + '/' + now + "_result.html"
-    # fp = PATH(filename)
     fp = open(filename, 'wb')
     #定义测试报告
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='自动化测试报告', description='用例执行情况：')

@@ -38,7 +38,7 @@ class TestCase(unittest.TestCase):
         home_yaml = PATH("../Case/my_share.yaml")
         ac.AppCase.execCase(self, f=home_yaml)
     def test_my_home(self):
-        home_yaml = PATH("../Case/home.yaml")
+        home_yaml = PATH("../Case/my_home.yaml")
         ac.AppCase.execCase(self, f=home_yaml)
     def test_create(self):
         home_yaml = PATH("../Case/create.yaml")
