@@ -36,3 +36,16 @@
   value_2: '86_18911373631'
   key_3: password
   value_3: 96e79218965eb72c92a549dd5a3301121
+-
+  case_name: 参数:
+  request_method: post
+  homeyaml: './Case/post_param.yaml'
+  server_info: release
+  fun_name: userlogin
+  retval: 'E_AUTH'
+  key_1: authtype
+  value_1: phone
+  key_2: token
+  value_2: '86_18911373631'
+  key_3: password
+  value_3: 96e79218965eb72c92a549dd5a3301121

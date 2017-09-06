@@ -2,6 +2,7 @@
 
 from api.PO.variable import GetVariable as common
 from api.PO.operateurl import Getoperateurl as gou
+from api.PO import operateYaml as oy
 from api.PO.json import Getjson as gs
 import requests
 import os
@@ -25,4 +26,5 @@ def request_get(cts, mOperate):
 
 def request_post(cts, mOperate):
         url = gou.get_operateurl(cts, mOperate)
-        print(requests.post(url).text)
+        files = oy.getTxt(mOperate['homeyaml'])
+        print(requests.post(url, files).text)
