@@ -4,11 +4,12 @@ Created on 2017-9-02
 @author: lisq
 Project:测试用例
 '''
+import os
+import time
 import unittest
-from api.TestCase import TestCase as tc
-from api.report import HTMLTestRunner
-import time, os
 
+from api.PO import HTMLTestRunner
+from api.TestCase import TestCase as tc
 
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
