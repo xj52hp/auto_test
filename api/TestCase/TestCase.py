@@ -2,8 +2,6 @@
 
 import unittest
 import os
-from appium import webdriver
-from easyvaas.PO.deviceinfo import Getdeviceinfo as gd
 from api.testDAL import appCase as ac
 
 PATH = lambda p: os.path.abspath(
