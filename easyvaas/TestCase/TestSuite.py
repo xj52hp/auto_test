@@ -12,10 +12,7 @@ from easyvaas.PO import HTMLTestRunner
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
-
 result = "../report/"
-
-
 
 #构造测试集
 suite = unittest.TestSuite()
@@ -43,12 +40,10 @@ if __name__=='__main__':
 
     #若已经存在以当天日期为名称的文件夹的情况，则直接将测试报告放到这个文件夹之下
     if os.path.exists(tdresult) is not True:
-
         #不存在以当天日期为名称的文件夹的情况，则建立一个以当天日期为名称的文件夹
         os.mkdir(tdresult)
     #以写文本文件或写二进制文件的模式打开测试报告文件
     filename = tdresult + '/' + now + "_result.html"
-    # fp = PATH(filename)
     fp = open(filename, 'wb')
     #定义测试报告
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='自动化测试报告', description='用例执行情况：')

@@ -1,17 +1,15 @@
-
 # -*- coding: utf-8 -*-
+
 import os
 from easyvaas.PO import operateYaml
 from easyvaas.PO import operateElement as bo
 import time
-
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
 
-
 class AppCase(object):
-
+    #执行测试用例,输出用例头信息
     def execCase(self, f):
         time.sleep(20)
 

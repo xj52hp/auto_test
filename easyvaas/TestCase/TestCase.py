@@ -10,24 +10,18 @@ PATH = lambda p: os.path.abspath(
        os.path.join(os.path.dirname(__file__), p)
  )
 
-
 class TestCase(unittest.TestCase):
-
     def setUp(self):
         self.desired_caps = gd.get_deviceinfo(self)
         self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', self.desired_caps)
-
     def tearDown(self):
         self.driver.quit() #case执行完退出
-
     def test_install(self):
         home_yaml = PATH("../Case/install.yaml")
         ac.AppCase.execCase(self, f=home_yaml)
-
     def test_login(self):
         home_yaml = PATH("../Case/login.yaml")
         ac.AppCase.execCase(self, f=home_yaml)
-
     def test_my(self):
         home_yaml = PATH("../Case/my.yaml")
         ac.AppCase.execCase(self, f=home_yaml)

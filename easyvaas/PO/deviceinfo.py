@@ -1,6 +1,7 @@
 
 
 class Getdeviceinfo():
+    #获取设备信息
     def get_deviceinfo(self):
         android_desired_caps = {
             'platformName': 'Android',

@@ -50,6 +50,24 @@ class OperateElement():
             return elements[mOperate["operate_type"]]()
         return False
 
+# 封装常用的标签
+def elements_by(mOperate, cts):
+    elements = {
+        common.find_element_by_id: lambda: cts.find_element_by_id(mOperate["element_info"]),
+        common.find_elements_by_id: lambda: cts.find_elements_by_id(mOperate["element_info"]),
+        common.find_element_by_xpath: lambda: cts.find_element_by_xpath(mOperate["element_info"]),
+        common.find_element_by_name: lambda: cts.find_element_by_name(mOperate['name']),
+        common.find_elements_by_name: lambda: cts.find_elements_by_name(mOperate['name'])[mOperate['index']],
+        common.find_element_by_class_name: lambda: cts.find_element_by_class_name(mOperate['element_info']),
+        common.find_elements_by_class_name: lambda: cts.find_elements_by_class_name(mOperate['element_info'])[
+            mOperate['index']]
+    }
+    return elements[mOperate["find_type"]]()
+
+
+#--------封装事件与业务----------#
+
+
 # 点击事件
 def operate_click(mOperate, cts):
     if mOperate["find_type"] == common.find_element_by_id or mOperate["find_type"] == common.find_element_by_name or mOperate["find_type"] == common.find_element_by_xpath:
@@ -68,7 +86,7 @@ def operate_attributes(mOperate, cts):
     except AssertionError as e:
         print("实际:          不相同或者元素的属性不正确:", e)
         return False
-
+#发送文字
 def send_keys(mOperate, cts):
     try:
         elements_by(mOperate, cts).set_text(mOperate['text'])
@@ -77,7 +95,7 @@ def send_keys(mOperate, cts):
     except:
         print('实际:          输入错误')
         return False
-
+#断言字符串相等
 def find_str(mOperate, cts):
     find_string = elements_by(mOperate, cts).text
     try:
@@ -87,7 +105,7 @@ def find_str(mOperate, cts):
     except AssertionError as e:
         print("预期:          相同: ", e)
         return False
-
+#断言字符串包含
 def find_strs(mOperate, cts):
     find_strings = elements_by(mOperate, cts).text
     try:
@@ -97,11 +115,12 @@ def find_strs(mOperate, cts):
     except AssertionError as e:
         print("预期:          包含: ", e)
         return False
+#保存字符串到临时文件
 def save_strs(mOperate, cts):
     bo = gt.writeTxt(temp_file, elements_by(mOperate, cts).text)
     print('预期:          ', elements_by(mOperate, cts).text)
     return bo
-
+#对比数字
 def diff_num(mOperate, cts):
         time.sleep(3)
         x = gt.getTxt(temp_file)
@@ -117,6 +136,7 @@ def diff_num(mOperate, cts):
         else:
             print('实际:          消耗异常: ', int(x), '!=', int(y), '+', int(mOperate['cost_num']))
             return False
+#对比控件内字符串与保存的临时文件是否包含
 def diff_strs(mOperate, cts):
     time.sleep(3)
     x = gt.getTxt(temp_file)
@@ -128,8 +148,6 @@ def diff_strs(mOperate, cts):
     except AssertionError as e:
         print('预期:          文本不一致: ', str(x), '!=', str(y))
         return False
-
-
 # 手势向左侧滑动
 def opreate_swipe_left(mOperate, cts):
     time.sleep(1)
@@ -137,8 +155,6 @@ def opreate_swipe_left(mOperate, cts):
     l = getSize(cts)
     for i in range(int(mOperate["num"])):
         cts.driver.swipe(l[0] / 0.75, l[1] / 2, l[0] / 0.55, l[1] / 2, 1500)
-
-
 # 手势向右侧滑动
 def opreate_swipe_right(mOperate, cts):
     time.sleep(1)
@@ -146,8 +162,6 @@ def opreate_swipe_right(mOperate, cts):
     l = getSize(cts)
     for i in range(int(mOperate["num"])):
         cts.driver.swipe(l[0] / 0.55, l[1] / 2, l[0] / 0.75, l[1] / 2, 1500)
-
-
 # 手势向下拉
 def opreate_swipe_down(mOperate, cts):
     time.sleep(1)
@@ -155,7 +169,6 @@ def opreate_swipe_down(mOperate, cts):
     l = getSize(cts)
     for i in range(int(mOperate["num"])):
         cts.driver.swipe(l[0] / 2, l[1] * 0.55, l[0] / 2, l[1] * 0.75, 1500)
-
 # 手势向上推
 def opreate_swipe_up(cts, mOperate):
     time.sleep(1)
@@ -163,14 +176,11 @@ def opreate_swipe_up(cts, mOperate):
     l = getSize(cts)
     for i in range(int(mOperate["num"])):
         cts.driver.swipe(l[0] / 2, l[1] * 0.75, l[0] / 2, l[1] * 0.55, 1500)
-
 #获取屏幕 width & height
 def getSize(cts):
-
     width = cts.driver.get_window_size()["width"]
     height = cts.driver.get_window_size()["height"]
     return (width, height)
-
 #----------------------------------
 # 获取当前日期与取到的日期进行对比，成功返回 True，不成功返回 False，只取到日
 def getNowday(mOperate, cts):
@@ -185,7 +195,7 @@ def getNowday(mOperate, cts):
     except AssertionError as e:
         print("预期:          不相同: ", e)
         return False
-
+#android系统按键
 def system_button(mOperate, cts):
     try:
         print('预期:          按系统键位: ', mOperate['text'])
@@ -193,7 +203,7 @@ def system_button(mOperate, cts):
         return True
     except:
         return False
-
+#对比toast,暂时没用
 def find_toast(mOperate, cts):
     operate_click(mOperate, cts)
     try:
@@ -202,7 +212,6 @@ def find_toast(mOperate, cts):
         return True
     except:
         return False
-
 #通过xpath循环读取列表内容，直到匹配
 def comment_region(mOperate, cts):
     # print("1-----1")
@@ -224,16 +233,3 @@ def comment_region(mOperate, cts):
                 return True
     except:
         return False
-
-# 封装常用的标签
-def elements_by(mOperate, cts):
-    elements = {
-        common.find_element_by_id: lambda: cts.find_element_by_id(mOperate["element_info"]),
-        common.find_elements_by_id: lambda: cts.find_elements_by_id(mOperate["element_info"]),
-        common.find_element_by_xpath: lambda: cts.find_element_by_xpath(mOperate["element_info"]),
-        common.find_element_by_name: lambda: cts.find_element_by_name(mOperate['name']),
-        common.find_elements_by_name: lambda: cts.find_elements_by_name(mOperate['name'])[mOperate['index']],
-        common.find_element_by_class_name: lambda: cts.find_element_by_class_name(mOperate['element_info']),
-        common.find_elements_by_class_name: lambda: cts.find_elements_by_class_name(mOperate['element_info'])[mOperate['index']]
-    }
-    return elements[mOperate["find_type"]]()
