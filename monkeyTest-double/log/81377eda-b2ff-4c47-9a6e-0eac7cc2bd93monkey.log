@@ -1,0 +1,349 @@
+:Monkey: seed=1507094170972 count=200
+:AllowPackage: cn.com.autohome.travel
+:IncludeCategory: android.intent.category.LAUNCHER
+:IncludeCategory: android.intent.category.MONKEY
+// Selecting main activities from category android.intent.category.LAUNCHER
+//   - NOT USING main activity com.android.contacts.activities.PeopleActivity (from package com.android.contacts)
+//   - NOT USING main activity com.android.contacts.activities.TwelveKeyDialer (from package com.android.contacts)
+//   - NOT USING main activity com.android.camera.Camera (from package com.android.camera)
+//   - NOT USING main activity com.miui.gallery.app.Gallery (from package com.miui.gallery)
+//   - NOT USING main activity com.android.mms.ui.MmsTabActivity (from package com.android.mms)
+//   - NOT USING main activity com.android.settings.MainSettings (from package com.android.settings)
+//   - NOT USING main activity com.miui.barcodescanner.activity.CaptureActivity (from package com.miui.barcodescanner)
+//   - NOT USING main activity com.android.calculator2.Calculator (from package com.android.calculator2)
+//   - NOT USING main activity com.android.deskclock.DeskClockTabActivity (from package com.android.deskclock)
+//   - NOT USING main activity com.android.email.activity.Welcome (from package com.android.email)
+//   - NOT USING main activity com.miui.notes.ui.NotesListActivity (from package com.miui.notes)
+//   - NOT USING main activity com.android.thememanager.ThemeResourceTabActivity (from package com.android.thememanager)
+//   - NOT USING main activity com.xiaomi.market.ui.MarketTabActivity (from package com.xiaomi.market)
+//   - NOT USING main activity com.mipay.wallet.ui.MipayEntryActivity (from package com.mipay.wallet)
+//   - NOT USING main activity com.android.browser.BrowserActivity (from package com.android.browser)
+//   - NOT USING main activity com.android.calendar.homepage.AllInOneActivity (from package com.android.calendar)
+//   - NOT USING main activity com.miui.weather2.ActivityWeatherMain (from package com.miui.weather2)
+//   - NOT USING main activity com.android.fileexplorer.FileExplorerTabActivity (from package com.android.fileexplorer)
+//   - NOT USING main activity com.baidu.appsearch.LauncherActivity (from package com.baidu.appsearch)
+//   - NOT USING main activity com.qihoo.appstore.home.LauncherActivity (from package com.qihoo.appstore)
+//   - NOT USING main activity com.baidu.travel.activity.MainAdvertiseActivity (from package com.baidu.travel)
+//   - NOT USING main activity com.miui.securityscan.MainActivity (from package com.miui.securitycenter)
+//   - NOT USING main activity com.miui.bugreport.ui.MainActivity (from package com.miui.bugreport)
+//   - NOT USING main activity com.miui.fmradio.FmActivity (from package com.miui.fm)
+//   - NOT USING main activity com.miui.compass.CompassActivity (from package com.miui.compass)
+//   - NOT USING main activity com.android.soundrecorder.SoundRecorder (from package com.android.soundrecorder)
+//   - NOT USING main activity com.android.updater.MainActivity (from package com.android.updater)
+//   - NOT USING main activity com.xiaomi.account.ui.AccountSettingsActivity (from package com.xiaomi.account)
+//   - NOT USING main activity com.miui.video.HomeActivity (from package com.miui.video)
+//   - NOT USING main activity com.miui.voiceassist.CTAAlertActivity (from package com.miui.voiceassist)
+//   - NOT USING main activity com.miui.player.ui.MusicBrowserActivity (from package com.miui.player)
+//   - NOT USING main activity com.android.providers.downloads.ui.DownloadList (from package com.android.providers.downloads.ui)
+//   - NOT USING main activity com.xiaomi.gamecenter.ui.MainTabActivity (from package com.xiaomi.gamecenter)
+//   - NOT USING main activity com.mi.vtalk.business.MiVTalkMainActivity (from package com.mi.vtalk)
+//   - NOT USING main activity com.tencent.mm.ui.LauncherUI (from package com.tencent.mm)
+//   - NOT USING main activity com.autohome.plugin.tour.activitys.TMainActivity (from package com.autohome.plugin.tour)
+//   - NOT USING main activity com.UCMobile.main.UCMobile (from package com.UCMobile)
+//   - NOT USING main activity com.chanyouji.android.SplashActivity (from package com.chanyouji.android)
+//   - NOT USING main activity com.mfw.roadbook.main.StartActivity (from package com.mfw.roadbook)
+//   - NOT USING main activity com.autohome.main.me.ui.activity.OwnerActivity (from package com.autohome.main.me)
+//   - NOT USING main activity com.tencent.mtt.SplashActivity (from package com.tencent.mtt)
+//   - NOT USING main activity com.chanyouji.inspiration.activities.splash.SplashActivity (from package com.chanyouji.inspiration)
+//   - NOT USING main activity com.alibaba.android.rimet.biz.SplashActivity (from package com.alibaba.android.rimet)
+//   - NOT USING main activity com.tencent.mobileqq.activity.SplashActivity (from package com.tencent.mobileqq)
+//   - NOT USING main activity com.xiaomi.mitv.phone.remotecontroller.HoriWidgetMainActivityV2 (from package com.duokan.phone.remotecontroller)
+//   + Using main activity cn.com.autohome.travel.module.launcher.SplashActivity (from package cn.com.autohome.travel)
+// Selecting main activities from category android.intent.category.MONKEY
+//   - NOT USING main activity com.miui.mipub.ui.cvlist.ConversationListActivity (from package com.miui.mipub)
+//   - NOT USING main activity com.miui.home.launcher.Launcher (from package com.miui.home)
+//   - NOT USING main activity com.android.settings.applications.ManageApplicationsActivity (from package com.android.settings)
+//   - NOT USING main activity com.xiaomi.payment.MiliCenterEntryActivity (from package com.xiaomi.payment)
+//   - NOT USING main activity com.mipay.wallet.ui.MipayEntryActivity (from package com.mipay.wallet)
+//   - NOT USING main activity com.miui.yellowpage.activity.MonkeyActivity (from package com.miui.yellowpage)
+//   - NOT USING main activity com.xiaomi.vip.ui.monkeyentry.MonkeyActivity (from package com.xiaomi.vip)
+// Seeded: 1507094170972
+// Event percentages:
+//   0: 15.0%
+//   1: 10.0%
+//   2: 2.0%
+//   3: 15.0%
+//   4: -0.0%
+//   5: 25.0%
+//   6: 15.0%
+//   7: 2.0%
+//   8: 2.0%
+//   9: 1.0%
+//   10: 13.0%
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=cn.com.autohome.travel/.module.launcher.SplashActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=cn.com.autohome.travel/.module.launcher.SplashActivity } in package cn.com.autohome.travel
+Sleeping for 500 milliseconds
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,3.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,4.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-1.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,1.0)
+:Sending Touch (ACTION_DOWN): 0:(375.0,791.0)
+:Sending Touch (ACTION_UP): 0:(390.31805,776.40497)
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 23    // KEYCODE_DPAD_CENTER
+:Sending Key (ACTION_UP): 23    // KEYCODE_DPAD_CENTER
+Sleeping for 500 milliseconds
+:Sending Touch (ACTION_DOWN): 0:(1073.0,1138.0)
+:Sending Touch (ACTION_MOVE): 0:(1080.0,1141.6937)
+:Sending Touch (ACTION_MOVE): 0:(1080.0,1147.5334)
+:Sending Touch (ACTION_MOVE): 0:(1080.0,1151.2368)
+:Sending Touch (ACTION_MOVE): 0:(1080.0,1156.3588)
+:Sending Touch (ACTION_MOVE): 0:(1080.0,1158.9768)
+:Sending Touch (ACTION_MOVE): 0:(1080.0,1169.1461)
+:Sending Touch (ACTION_MOVE): 0:(1080.0,1177.2435)
+:Sending Touch (ACTION_MOVE): 0:(1080.0,1183.3397)
+:Sending Touch (ACTION_MOVE): 0:(1080.0,1192.9926)
+:Sending Touch (ACTION_UP): 0:(1080.0,1199.3728)
+Sleeping for 500 milliseconds
+:Sending Touch (ACTION_DOWN): 0:(241.0,1439.0)
+:Sending Touch (ACTION_UP): 0:(241.00194,1437.0554)
+Sleeping for 500 milliseconds
+    // Allowing start of Intent { cmp=cn.com.autohome.travel/.module.home.HomeActivity } in package cn.com.autohome.travel
+    // activityResuming(cn.com.autohome.travel)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,1.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,2.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-2.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,3.0)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-4.0)
+:Sending Key (ACTION_DOWN): 82    // KEYCODE_MENU
+:Sending Key (ACTION_UP): 82    // KEYCODE_MENU
+Sleeping for 500 milliseconds
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 170    // KEYCODE_TV
+:Sending Key (ACTION_UP): 170    // KEYCODE_TV
+Sleeping for 500 milliseconds
+:Sending Touch (ACTION_DOWN): 0:(672.0,669.0)
+:Sending Touch (ACTION_UP): 0:(671.90424,674.555)
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 19    // KEYCODE_DPAD_UP
+:Sending Key (ACTION_UP): 19    // KEYCODE_DPAD_UP
+Sleeping for 500 milliseconds
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,4.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(1057.0,1253.0)
+:Sending Touch (ACTION_UP): 0:(1067.6227,1242.0897)
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 23    // KEYCODE_DPAD_CENTER
+:Sending Key (ACTION_UP): 23    // KEYCODE_DPAD_CENTER
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 82    // KEYCODE_MENU
+:Sending Key (ACTION_UP): 82    // KEYCODE_MENU
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 20    // KEYCODE_DPAD_DOWN
+:Sending Key (ACTION_UP): 20    // KEYCODE_DPAD_DOWN
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 22    // KEYCODE_DPAD_RIGHT
+:Sending Key (ACTION_UP): 22    // KEYCODE_DPAD_RIGHT
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 82    // KEYCODE_MENU
+:Sending Key (ACTION_UP): 82    // KEYCODE_MENU
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 21    // KEYCODE_DPAD_LEFT
+:Sending Key (ACTION_UP): 21    // KEYCODE_DPAD_LEFT
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 244    // KEYCODE_TV_INPUT_HDMI_2
+:Sending Key (ACTION_UP): 244    // KEYCODE_TV_INPUT_HDMI_2
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 22    // KEYCODE_DPAD_RIGHT
+:Sending Key (ACTION_UP): 22    // KEYCODE_DPAD_RIGHT
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 82    // KEYCODE_MENU
+:Sending Key (ACTION_UP): 82    // KEYCODE_MENU
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 211    // KEYCODE_ZENKAKU_HANKAKU
+:Sending Key (ACTION_UP): 211    // KEYCODE_ZENKAKU_HANKAKU
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 22    // KEYCODE_DPAD_RIGHT
+:Sending Key (ACTION_UP): 22    // KEYCODE_DPAD_RIGHT
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 22    // KEYCODE_DPAD_RIGHT
+:Sending Key (ACTION_UP): 22    // KEYCODE_DPAD_RIGHT
+Sleeping for 500 milliseconds
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 22    // KEYCODE_DPAD_RIGHT
+:Sending Key (ACTION_UP): 22    // KEYCODE_DPAD_RIGHT
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 82    // KEYCODE_MENU
+:Sending Key (ACTION_UP): 82    // KEYCODE_MENU
+Sleeping for 500 milliseconds
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,4.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,2.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,0.0)
+:Sending Trackball (ACTION_DOWN): 0:(0.0,0.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+    //[calendar_time:2017-09-30 12:54:26.315  system_uptime:12113901]
+    // Sending event #100
+Sleeping for 500 milliseconds
+    //[calendar_time:2017-09-30 12:54:26.877  system_uptime:12114403]
+    // Sending event #100
+:Sending Key (ACTION_DOWN): 20    // KEYCODE_DPAD_DOWN
+:Sending Key (ACTION_UP): 20    // KEYCODE_DPAD_DOWN
+Sleeping for 500 milliseconds
+:Sending Touch (ACTION_DOWN): 0:(915.0,307.0)
+:Sending Touch (ACTION_UP): 0:(917.9674,324.4562)
+Sleeping for 500 milliseconds
+    // Allowing start of Intent { cmp=cn.com.autohome.travel/.module.searchfilter.FilterSystemActivity } in package cn.com.autohome.travel
+:Sending Key (ACTION_DOWN): 255    // KEYCODE_TV_ZOOM_MODE
+:Sending Key (ACTION_UP): 255    // KEYCODE_TV_ZOOM_MODE
+Sleeping for 500 milliseconds
+:Sending Touch (ACTION_DOWN): 0:(603.0,1408.0)
+:Sending Touch (ACTION_UP): 0:(606.76306,1397.9658)
+Sleeping for 500 milliseconds
+    // Allowing start of Intent { cmp=cn.com.autohome.travel/.module.editor.SelectCityActivity } in package cn.com.autohome.travel
+:Sending Key (ACTION_DOWN): 82    // KEYCODE_MENU
+:Sending Key (ACTION_UP): 82    // KEYCODE_MENU
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 117    // KEYCODE_META_LEFT
+:Sending Key (ACTION_UP): 117    // KEYCODE_META_LEFT
+    // Rejecting start of Intent { act=android.intent.action.ASSIST cmp=android/com.android.internal.app.ResolverActivity } in package android
+Sleeping for 500 milliseconds
+:Sending Touch (ACTION_DOWN): 0:(92.0,380.0)
+:Sending Touch (ACTION_MOVE): 0:(85.601814,382.88892)
+:Sending Touch (ACTION_MOVE): 0:(76.43844,394.38336)
+:Sending Touch (ACTION_UP): 0:(72.776955,400.03064)
+Sleeping for 500 milliseconds
+    // Allowing start of Intent { cmp=cn.com.autohome.travel/.module.searchfilter.SearchHomeActivity } in package cn.com.autohome.travel
+:Sending Touch (ACTION_DOWN): 0:(191.0,1468.0)
+:Sending Touch (ACTION_MOVE): 0:(180.07355,1460.6492)
+:Sending Touch (ACTION_MOVE): 0:(159.87039,1452.3258)
+:Sending Touch (ACTION_MOVE): 0:(156.28932,1438.3975)
+:Sending Touch (ACTION_MOVE): 0:(141.48822,1430.2527)
+:Sending Touch (ACTION_MOVE): 0:(136.67606,1421.6185)
+:Sending Touch (ACTION_MOVE): 0:(135.89278,1406.4722)
+:Sending Touch (ACTION_UP): 0:(119.90891,1403.5358)
+Sleeping for 500 milliseconds
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-2.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-1.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,2.0)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,2.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,3.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-1.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,2.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,1.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-1.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,-5.0)
+:Sending Key (ACTION_DOWN): 23    // KEYCODE_DPAD_CENTER
+:Sending Key (ACTION_UP): 23    // KEYCODE_DPAD_CENTER
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 106    // KEYCODE_BUTTON_THUMBL
+:Sending Key (ACTION_UP): 106    // KEYCODE_BUTTON_THUMBL
+Sleeping for 500 milliseconds
+:Sending Touch (ACTION_DOWN): 0:(11.0,1008.0)
+:Sending Touch (ACTION_UP): 0:(4.8938956,1004.4226)
+Sleeping for 500 milliseconds
+    // Allowing start of Intent { cmp=cn.com.autohome.travel/.module.recommend.StampDetailActivity } in package cn.com.autohome.travel
+:Sending Touch (ACTION_DOWN): 0:(115.0,240.0)
+    // Injection Failed
+:Sending Touch (ACTION_UP): 0:(120.47613,239.95232)
+    // Injection Failed
+Sleeping for 500 milliseconds
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,4.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,4.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,2.0)
+:Sending Touch (ACTION_DOWN): 0:(181.0,486.0)
+:Sending Touch (ACTION_UP): 0:(188.32437,477.52875)
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 21    // KEYCODE_DPAD_LEFT
+:Sending Key (ACTION_UP): 21    // KEYCODE_DPAD_LEFT
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 82    // KEYCODE_MENU
+:Sending Key (ACTION_UP): 82    // KEYCODE_MENU
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 4    // KEYCODE_BACK
+:Sending Key (ACTION_UP): 4    // KEYCODE_BACK
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 257    // KEYCODE_TV_MEDIA_CONTEXT_MENU
+:Sending Key (ACTION_UP): 257    // KEYCODE_TV_MEDIA_CONTEXT_MENU
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 21    // KEYCODE_DPAD_LEFT
+:Sending Key (ACTION_UP): 21    // KEYCODE_DPAD_LEFT
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 20    // KEYCODE_DPAD_DOWN
+:Sending Key (ACTION_UP): 20    // KEYCODE_DPAD_DOWN
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 236    // KEYCODE_TV_TERRESTRIAL_DIGITAL
+:Sending Key (ACTION_UP): 236    // KEYCODE_TV_TERRESTRIAL_DIGITAL
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 82    // KEYCODE_MENU
+:Sending Key (ACTION_UP): 82    // KEYCODE_MENU
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 25    // KEYCODE_VOLUME_DOWN
+:Sending Key (ACTION_UP): 25    // KEYCODE_VOLUME_DOWN
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 19    // KEYCODE_DPAD_UP
+:Sending Key (ACTION_UP): 19    // KEYCODE_DPAD_UP
+Sleeping for 500 milliseconds
+:Sending Touch (ACTION_DOWN): 0:(119.0,1661.0)
+:Sending Touch (ACTION_UP): 0:(128.79005,1660.3156)
+Sleeping for 500 milliseconds
+:Sending Touch (ACTION_DOWN): 0:(342.0,720.0)
+:Sending Touch (ACTION_UP): 0:(342.44284,708.814)
+Sleeping for 500 milliseconds
+:Sending Touch (ACTION_DOWN): 0:(133.0,1519.0)
+:Sending Touch (ACTION_MOVE): 0:(133.52385,1511.7946)
+:Sending Touch (ACTION_MOVE): 0:(133.67587,1511.5553)
+:Sending Touch (ACTION_MOVE): 0:(134.26317,1511.3427)
+:Sending Touch (ACTION_MOVE): 0:(134.69974,1494.7887)
+:Sending Touch (ACTION_MOVE): 0:(135.20357,1481.7855)
+:Sending Touch (ACTION_MOVE): 0:(135.7779,1466.1614)
+:Sending Touch (ACTION_UP): 0:(136.44542,1447.9424)
+Sleeping for 500 milliseconds
+:Sending Key (ACTION_DOWN): 82    // KEYCODE_MENU
+:Sending Key (ACTION_UP): 82    // KEYCODE_MENU
+Sleeping for 500 milliseconds
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-1.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,4.0)
+Events injected: 200
+:Sending rotation degree=0, persist=false
+:Dropped: keys=0 pointers=2 trackballs=0 flips=2 rotations=0
+## Network stats: elapsed time=27946ms (0ms mobile, 0ms wifi, 27946ms not connected)
+// Monkey finished
