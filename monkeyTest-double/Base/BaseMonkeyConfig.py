@@ -1,3 +1,4 @@
+__author__ = 'Administrator'
 import configparser
 import time
 import os

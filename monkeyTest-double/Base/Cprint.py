@@ -1,3 +1,4 @@
+__author__ = 'Administrator'
 import ctypes
 
 STD_INPUT_HANDLE = -10
