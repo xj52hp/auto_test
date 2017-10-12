@@ -1,0 +1,38 @@
+---
+#--------------------------------------------------
+#检查房间内各状态
+-
+  case_id: room_001
+  case_name: room
+  element_info: com.ccvideo:id/tab_bar_mine_btn
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_002
+  case_name: room
+  element_info: com.ccvideo:id/room_tv
+  find_type: by_id
+  operate_type: click
+
+
+#获取原始薏米数
+-
+  case_id: room_031
+  case_name: room
+  element_info: com.ccvideo:id/live_room_gift_iv
+  find_type: by_id
+  operate_type: click
+-
+  case_id: room_033
+  case_name: room
+  element_info: com.ccvideo:id/gift_content_gv
+  find_type: by_id
+  operate_type: swipeRight
+  time: 2
+-
+  case_id: room_034
+  case_name: room
+  element_info: com.ccvideo:id/gift_content_gv
+  find_type: by_id
+  operate_type: swipeLeft
+  time: 2
