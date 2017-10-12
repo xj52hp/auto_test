@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 import os
 from selenium.webdriver.support.ui import WebDriverWait
-from easylive.PO import operateYaml
-from easylive.PO import operateElement as bo
-from easylive.TestCase import login_out_phone as lo
+from appium_APP_V1.PO import operateYaml
+from appium_APP_V1.PO import operateElement as bo
+from appium_APP_V1.TestCase import login_out_phone as lo
 import time
 
 PATH = lambda p: os.path.abspath(

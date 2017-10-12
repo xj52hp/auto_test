@@ -5,10 +5,10 @@ Created on 2017-8-28
 Project:测试用例
 '''
 import unittest
-from easyvaas.TestCase import TestCase as tc
+from appium_APP_V2.TestCase import TestCase as tc
 import os
 import time
-from easyvaas.PO import HTMLTestRunner
+from appium_APP_V2.PO import HTMLTestRunner
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )

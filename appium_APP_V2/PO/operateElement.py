@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from assertpy import assert_that
-from easyvaas.PO.variable import GetVariable as common
-from easyvaas.PO import operateYaml as gt
+from appium_APP_V2.PO.variable import GetVariable as common
+from appium_APP_V2.PO import operateYaml as gt
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By

@@ -3,8 +3,8 @@
 import unittest
 import os
 from appium import webdriver
-from easyvaas.PO.deviceinfo import Getdeviceinfo as gd
-from easyvaas.testDAL import appCase as ac
+from appium_APP_V2.PO.deviceinfo import Getdeviceinfo as gd
+from appium_APP_V2.testDAL import appCase as ac
 
 PATH = lambda p: os.path.abspath(
        os.path.join(os.path.dirname(__file__), p)

@@ -1,6 +1,6 @@
 
-from easylive.PO.variable import GetVariable as common
-from easylive.PO import operateYaml as gt
+from appium_APP_V1.PO.variable import GetVariable as common
+from appium_APP_V1.PO import operateYaml as gt
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By

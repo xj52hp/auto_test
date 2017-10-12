@@ -1,6 +1,6 @@
 
 # -*- coding: utf-8 -*-
-from easylive.testDAL import appCase
+from appium_APP_V1.testDAL import appCase
 
 class GetAppCase():
     # def __init__(self, test_module="", AppCaseInfo="", AppCase="",fps=[], cpu=[], men=[]):

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import os
-from easyvaas.PO import operateYaml
-from easyvaas.PO import operateElement as bo
+from appium_APP_V2.PO import operateYaml
+from appium_APP_V2.PO import operateElement as bo
 import time
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)

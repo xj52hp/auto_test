@@ -3,7 +3,7 @@
 import os
 import unittest
 from appium import webdriver
-from easylive.testDAL import appCase as ac
+from appium_APP_V1.testDAL import appCase as ac
 
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
@@ -25,7 +25,7 @@ class testroom(unittest.TestCase):
 
     def test_search(self):
 
-        home_login_yaml = PATH("/Users/lishuangqing/PycharmProjects/auto_test/easylive/Case/Room1.yaml")
+        home_login_yaml = PATH("/Users/lishuangqing/PycharmProjects/auto_test/appium_APP_V1/Case/Room1.yaml")
         ac.AppCase.execCase(self, f=home_login_yaml)
 
 
