@@ -2,10 +2,11 @@
 import time
 from selenium.common.exceptions import NoSuchElementException
 import os.path
-from automation_framework_demo.framework.logger import Logger
+from auto_web.framework.logger import Logger
 import sys
-reload(sys)
-sys.setdefaultencoding('utf8')  # 如果不添加以上三行代码，xpath如果表达式包括中文，就会报错，python 2.x 默认
+from importlib import reload
+# reload(sys)
+# sys.setdefaultencoding('utf8')  # 如果不添加以上三行代码，xpath如果表达式包括中文，就会报错，python 2.x 默认
 # string 类型是assic类型，在xpath拆分的时候，报codec can't decode byte 0xe4 in position 17: ordinal not in range(128)
 
 # create a logger instance
@@ -52,7 +53,7 @@ class BasePage(object):
         """
         在这里我们把file_path这个参数写死，直接保存到我们项目根目录的一个文件夹.\Screenshots下
         """
-        file_path = os.path.dirname(os.path.abspath('.')) + '../screenshots/'
+        file_path = os.path.dirname(os.path.abspath('.')) + '/screenshots/'
         rq = time.strftime('%Y%m%d%H%M', time.localtime(time.time()))
         screen_name = file_path + rq + '.png'
         try:

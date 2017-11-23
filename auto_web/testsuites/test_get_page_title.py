@@ -1,8 +1,8 @@
 # coding = utf-8
 import unittest
 
-from automation_framework_demo.framework.browser_engine import BrowserEngine
-from automation_framework_demo.pageobjects.baidu_homepage import HomePage
+from auto_web.framework.browser_engine import BrowserEngine
+from auto_web.pageobjects.baidu_homepage import HomePage
 
 
 class GetPageTitle(unittest.TestCase):

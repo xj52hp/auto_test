@@ -1,0 +1,4 @@
+2017-11-23 17:28:15,456 - BrowserEngine - INFO - You had select Chrome browser.
+2017-11-23 17:28:15,456 - BrowserEngine - INFO - The test server url is: https://www.baidu.com
+2017-11-23 17:28:18,422 - BrowserEngine - INFO - Starting Chrome browser.
+2017-11-23 17:28:20,376 - BrowserEngine - INFO - Open url: https://www.baidu.com
