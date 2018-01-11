@@ -162,7 +162,7 @@ def init_dir():
 
 
 if __name__ == '__main__':
-    killport()
+    #killport()
     time.sleep(1)
     init_dir()
     runnerPool()
