@@ -75,7 +75,10 @@ def mkdirInit(devices, app, data=None):
     writeSum(0, data, PATH(info_dir + "sumInfo.pickle")) # 初始化记录当前真实连接的设备数
 
 def runnerPool():
-    os.makedirs(PATH(info_dir)) # 创建持久化目录
+    try:
+        os.makedirs(PATH(info_dir)) # 创建持久化目录
+    except:
+        print("info目录已经创建")
     devices_Pool = []
     devices = ba.attached_devices()
     if devices:
