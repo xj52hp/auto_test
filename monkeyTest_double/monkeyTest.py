@@ -154,16 +154,17 @@ def killport():
 
 def init_dir():
     if os.path.exists(info_dir):
-        shutil.rmtree((PATH(info_dir)))  # 删除持久化目录
+        shutil.rmtree(info_dir)  # 删除持久化目录
     os.makedirs(PATH(info_dir))  # 创建持久化目录
     if os.path.exists(log_dir):
-        shutil.rmtree((PATH(log_dir)))  # 删除持久化目录
+        shutil.rmtree(log_dir)  # 删除持久化目录
     os.makedirs(PATH(log_dir))  # 创建持久化目录
+
 
 if __name__ == '__main__':
     killport()
     time.sleep(1)
-    # init_dir()
+    init_dir()
     runnerPool()
     # p = Process(target=runnerPool, args=())
     # p.start()
