@@ -4,8 +4,8 @@ import pickle
 import subprocess
 import shutil
 
-from Base.BasePickle import writeInfo, writeSum, readInfo
-from Base.BaseWriteReport import report
+from monkeyTest_one.Base.BasePickle import writeInfo, writeSum, readInfo
+from monkeyTest_one.Base.BaseWriteReport import report
 
 import datetime
 import uuid
@@ -13,17 +13,17 @@ import time
 from multiprocessing import Pool
 import shelve
 import xlsxwriter
-from Base.BaseFile import OperateFile
+from monkeyTest_one.Base.BaseFile import OperateFile
 import os
-from Base import AdbCommon
-from Base import BaseMonkeyConfig
+from monkeyTest_one.Base import AdbCommon
+from monkeyTest_one.Base import BaseMonkeyConfig
 import re
 
-from Base import BasePhoneMsg
-from Base import BaseReport
-from Base import BaseMonitor
-from Base import BaseAnalysis
-from Base import  BaseCashEmnu as go
+from monkeyTest_one.Base import BasePhoneMsg
+from monkeyTest_one.Base import BaseReport
+from monkeyTest_one.Base import BaseMonitor
+from monkeyTest_one.Base import BaseAnalysis
+from monkeyTest_one.Base import  BaseCashEmnu as go
 
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
