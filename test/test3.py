@@ -34,3 +34,10 @@ def extract(inpath):
 
 inpath = '/Users/lishuangqing2019/Desktop/66.xlsx' # excel文件所在路径
 extract(inpath)
+
+
+
+def zhonghang():
+    way = ''
+
+    if way = 'bus' or way = 'tuizhe'
